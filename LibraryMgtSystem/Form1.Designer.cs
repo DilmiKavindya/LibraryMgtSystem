@@ -53,9 +53,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(133, 38);
+            pictureBox1.Location = new Point(132, 30);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(89, 88);
+            pictureBox1.Size = new Size(110, 103);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -82,7 +82,7 @@
             // 
             // txtUsername
             // 
-            txtUsername.BackColor = Color.FromArgb(128, 64, 64);
+            txtUsername.BackColor = Color.FromArgb(224, 224, 224);
             txtUsername.BorderStyle = BorderStyle.None;
             txtUsername.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtUsername.Location = new Point(116, 161);
@@ -95,7 +95,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.BackColor = Color.FromArgb(128, 64, 64);
+            txtPassword.BackColor = Color.FromArgb(224, 224, 224);
             txtPassword.BorderStyle = BorderStyle.None;
             txtPassword.Font = new Font("Arial", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPassword.Location = new Point(116, 228);
@@ -123,7 +123,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.Blue;
+            btnLogin.BackColor = Color.RoyalBlue;
             btnLogin.FlatStyle = FlatStyle.Popup;
             btnLogin.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.Location = new Point(54, 300);
@@ -149,7 +149,7 @@
             // pictureBoxInstagram
             // 
             pictureBoxInstagram.Image = (Image)resources.GetObject("pictureBoxInstagram.Image");
-            pictureBoxInstagram.Location = new Point(65, 446);
+            pictureBoxInstagram.Location = new Point(65, 466);
             pictureBoxInstagram.Name = "pictureBoxInstagram";
             pictureBoxInstagram.Size = new Size(48, 45);
             pictureBoxInstagram.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -159,7 +159,7 @@
             // pictureBoxFacebook
             // 
             pictureBoxFacebook.Image = (Image)resources.GetObject("pictureBoxFacebook.Image");
-            pictureBoxFacebook.Location = new Point(154, 446);
+            pictureBoxFacebook.Location = new Point(154, 466);
             pictureBoxFacebook.Name = "pictureBoxFacebook";
             pictureBoxFacebook.Size = new Size(48, 45);
             pictureBoxFacebook.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -169,7 +169,7 @@
             // pictureBoxYoutube
             // 
             pictureBoxYoutube.Image = (Image)resources.GetObject("pictureBoxYoutube.Image");
-            pictureBoxYoutube.Location = new Point(248, 446);
+            pictureBoxYoutube.Location = new Point(248, 466);
             pictureBoxYoutube.Name = "pictureBoxYoutube";
             pictureBoxYoutube.Size = new Size(48, 45);
             pictureBoxYoutube.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -179,12 +179,12 @@
             // 
             // btnClose
             // 
-            btnClose.BackColor = Color.FromArgb(128, 64, 64);
-            btnClose.FlatStyle = FlatStyle.Popup;
+            btnClose.BackColor = Color.FromArgb(224, 224, 224);
+            btnClose.FlatStyle = FlatStyle.System;
             btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(327, 5);
+            btnClose.Location = new Point(336, 5);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(35, 34);
+            btnClose.Size = new Size(26, 26);
             btnClose.TabIndex = 12;
             btnClose.Text = "X";
             btnClose.UseVisualStyleBackColor = false;
@@ -194,7 +194,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(128, 64, 64);
+            BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(368, 544);
             Controls.Add(btnClose);
             Controls.Add(pictureBoxYoutube);
