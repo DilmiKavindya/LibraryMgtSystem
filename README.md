@@ -1,6 +1,6 @@
 # 📚 Library Management System
 
-The **Library Management System** is a desktop application built using **C#** on the **.NET framework**, designed to help librarians manage books, members, borrowing, and returning processes efficiently.
+This **Library Management System** is a desktop application built using **C#** on the **.NET framework**, designed to help librarians manage books, members, borrowing, and returning processes efficiently.
 
 ## 🔧 Technologies Used
 
