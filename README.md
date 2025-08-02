@@ -7,7 +7,7 @@ The **Library Management System** is a desktop application built using **C#** on
 - **Language**: C#
 - **Framework**: .NET
 - **IDE**: Visual Studio
-- **Database**: SQL Server / LocalDB (you can specify)
+- **Database**: SQL Server 
 - **Version Control**: Git & GitHub
 
 ## ✅ Features
@@ -24,8 +24,8 @@ The **Library Management System** is a desktop application built using **C#** on
 ### Prerequisites
 
 - Visual Studio 2022 or higher
-- .NET Framework (version used in your project)
-- SQL Server or LocalDB (based on what you used)
+- .NET Framework
+- SQL Server
 
 ### Clone the Repository
 
