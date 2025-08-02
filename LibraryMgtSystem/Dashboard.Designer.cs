@@ -57,6 +57,7 @@
             // booksToolStripMenuItem
             // 
             booksToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addNewBookToolStripMenuItem, viewNewBooksToolStripMenuItem });
+            booksToolStripMenuItem.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             booksToolStripMenuItem.Image = (Image)resources.GetObject("booksToolStripMenuItem.Image");
             booksToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             booksToolStripMenuItem.Name = "booksToolStripMenuItem";
@@ -70,6 +71,7 @@
             addNewBookToolStripMenuItem.Name = "addNewBookToolStripMenuItem";
             addNewBookToolStripMenuItem.Size = new Size(254, 56);
             addNewBookToolStripMenuItem.Text = "Add New Book";
+            addNewBookToolStripMenuItem.Click += addNewBookToolStripMenuItem_Click;
             // 
             // viewNewBooksToolStripMenuItem
             // 
@@ -83,10 +85,11 @@
             // 
             studentToolStripMenuItem.BackColor = Color.OldLace;
             studentToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { addNewStudentToolStripMenuItem, viewStudentDetailsToolStripMenuItem });
+            studentToolStripMenuItem.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             studentToolStripMenuItem.Image = (Image)resources.GetObject("studentToolStripMenuItem.Image");
             studentToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            studentToolStripMenuItem.Size = new Size(124, 68);
+            studentToolStripMenuItem.Size = new Size(122, 68);
             studentToolStripMenuItem.Text = "Student";
             // 
             // addNewStudentToolStripMenuItem
@@ -94,7 +97,7 @@
             addNewStudentToolStripMenuItem.Image = (Image)resources.GetObject("addNewStudentToolStripMenuItem.Image");
             addNewStudentToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             addNewStudentToolStripMenuItem.Name = "addNewStudentToolStripMenuItem";
-            addNewStudentToolStripMenuItem.Size = new Size(259, 56);
+            addNewStudentToolStripMenuItem.Size = new Size(266, 56);
             addNewStudentToolStripMenuItem.Text = "Add New Student";
             // 
             // viewStudentDetailsToolStripMenuItem
@@ -102,42 +105,46 @@
             viewStudentDetailsToolStripMenuItem.Image = (Image)resources.GetObject("viewStudentDetailsToolStripMenuItem.Image");
             viewStudentDetailsToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             viewStudentDetailsToolStripMenuItem.Name = "viewStudentDetailsToolStripMenuItem";
-            viewStudentDetailsToolStripMenuItem.Size = new Size(259, 56);
+            viewStudentDetailsToolStripMenuItem.Size = new Size(266, 56);
             viewStudentDetailsToolStripMenuItem.Text = "View Student Details";
             // 
             // issueBooksToolStripMenuItem
             // 
+            issueBooksToolStripMenuItem.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             issueBooksToolStripMenuItem.Image = (Image)resources.GetObject("issueBooksToolStripMenuItem.Image");
             issueBooksToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             issueBooksToolStripMenuItem.Name = "issueBooksToolStripMenuItem";
-            issueBooksToolStripMenuItem.Size = new Size(149, 68);
+            issueBooksToolStripMenuItem.Size = new Size(152, 68);
             issueBooksToolStripMenuItem.Text = "Issue Books";
             // 
             // returnBooksToolStripMenuItem
             // 
             returnBooksToolStripMenuItem.BackColor = Color.OldLace;
+            returnBooksToolStripMenuItem.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             returnBooksToolStripMenuItem.Image = (Image)resources.GetObject("returnBooksToolStripMenuItem.Image");
             returnBooksToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             returnBooksToolStripMenuItem.Name = "returnBooksToolStripMenuItem";
-            returnBooksToolStripMenuItem.Size = new Size(160, 68);
+            returnBooksToolStripMenuItem.Size = new Size(161, 68);
             returnBooksToolStripMenuItem.Text = "Return Books";
             // 
             // completeBookDetailsToolStripMenuItem
             // 
+            completeBookDetailsToolStripMenuItem.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             completeBookDetailsToolStripMenuItem.Image = (Image)resources.GetObject("completeBookDetailsToolStripMenuItem.Image");
             completeBookDetailsToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             completeBookDetailsToolStripMenuItem.Name = "completeBookDetailsToolStripMenuItem";
-            completeBookDetailsToolStripMenuItem.Size = new Size(240, 68);
+            completeBookDetailsToolStripMenuItem.Size = new Size(235, 68);
             completeBookDetailsToolStripMenuItem.Text = "Complete Book Details";
             // 
             // eToolStripMenuItem
             // 
             eToolStripMenuItem.BackColor = Color.OldLace;
             eToolStripMenuItem.BackgroundImageLayout = ImageLayout.Stretch;
+            eToolStripMenuItem.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             eToolStripMenuItem.Image = (Image)resources.GetObject("eToolStripMenuItem.Image");
             eToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             eToolStripMenuItem.Name = "eToolStripMenuItem";
-            eToolStripMenuItem.Size = new Size(97, 68);
+            eToolStripMenuItem.Size = new Size(96, 68);
             eToolStripMenuItem.Text = "Exit";
             eToolStripMenuItem.Click += eToolStripMenuItem_Click;
             // 
