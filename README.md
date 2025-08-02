@@ -23,7 +23,7 @@ The **Library Management System** is a desktop application built using **C#** on
 
 ### Prerequisites
 
-- Visual Studio 2022 or higher
+- Visual Studio 2022 
 - .NET Framework
 - SQL Server
 
