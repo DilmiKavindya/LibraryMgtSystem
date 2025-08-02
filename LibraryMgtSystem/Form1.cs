@@ -63,11 +63,14 @@ namespace LibraryMgtSystem
                     if (count > 0)
                     {
                         // Login successful: proceed
-                        MessageBox.Show("Login successful!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Login successful!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide(); // Hide the login form
+                        Dashboard dsa = new Dashboard(); // Create an instance of the Dashboard form
+                        dsa.Show();
                     }
                     else
                     {
-                        MessageBox.Show("Wrong Username OR Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Wrong Username or Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
