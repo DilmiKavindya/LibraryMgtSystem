@@ -35,14 +35,14 @@
             label1 = new Label();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
+            btnCancel = new Button();
+            btnSave = new Button();
             dateTimePicker1 = new DateTimePicker();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtQuantity = new TextBox();
+            txtPrice = new TextBox();
+            txtPublication = new TextBox();
+            txtAuthor = new TextBox();
+            txtBookName = new TextBox();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
@@ -111,14 +111,14 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(255, 192, 128);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnCancel);
+            panel2.Controls.Add(btnSave);
             panel2.Controls.Add(dateTimePicker1);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtQuantity);
+            panel2.Controls.Add(txtPrice);
+            panel2.Controls.Add(txtPublication);
+            panel2.Controls.Add(txtAuthor);
+            panel2.Controls.Add(txtBookName);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label6);
@@ -130,25 +130,27 @@
             panel2.Size = new Size(440, 348);
             panel2.TabIndex = 2;
             // 
-            // button2
+            // btnCancel
             // 
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(338, 302);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 13;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = true;
+            btnCancel.FlatStyle = FlatStyle.Popup;
+            btnCancel.Location = new Point(338, 302);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(94, 29);
+            btnCancel.TabIndex = 13;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
-            // button1
+            // btnSave
             // 
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(187, 302);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 12;
-            button1.Text = "Save";
-            button1.UseVisualStyleBackColor = true;
+            btnSave.FlatStyle = FlatStyle.Popup;
+            btnSave.Location = new Point(187, 302);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(94, 29);
+            btnSave.TabIndex = 12;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // dateTimePicker1
             // 
@@ -157,40 +159,40 @@
             dateTimePicker1.Size = new Size(245, 27);
             dateTimePicker1.TabIndex = 11;
             // 
-            // textBox5
+            // txtQuantity
             // 
-            textBox5.Location = new Point(187, 258);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(245, 27);
-            textBox5.TabIndex = 10;
+            txtQuantity.Location = new Point(187, 258);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(245, 27);
+            txtQuantity.TabIndex = 10;
             // 
-            // textBox4
+            // txtPrice
             // 
-            textBox4.Location = new Point(187, 212);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(245, 27);
-            textBox4.TabIndex = 9;
+            txtPrice.Location = new Point(187, 212);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(245, 27);
+            txtPrice.TabIndex = 9;
             // 
-            // textBox3
+            // txtPublication
             // 
-            textBox3.Location = new Point(187, 129);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(245, 27);
-            textBox3.TabIndex = 8;
+            txtPublication.Location = new Point(187, 129);
+            txtPublication.Name = "txtPublication";
+            txtPublication.Size = new Size(245, 27);
+            txtPublication.TabIndex = 8;
             // 
-            // textBox2
+            // txtAuthor
             // 
-            textBox2.Location = new Point(187, 83);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(245, 27);
-            textBox2.TabIndex = 7;
+            txtAuthor.Location = new Point(187, 83);
+            txtAuthor.Name = "txtAuthor";
+            txtAuthor.Size = new Size(245, 27);
+            txtAuthor.TabIndex = 7;
             // 
-            // textBox1
+            // txtBookName
             // 
-            textBox1.Location = new Point(187, 36);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(245, 27);
-            textBox1.TabIndex = 6;
+            txtBookName.Location = new Point(187, 36);
+            txtBookName.Name = "txtBookName";
+            txtBookName.Size = new Size(245, 27);
+            txtBookName.TabIndex = 6;
             // 
             // label8
             // 
@@ -286,12 +288,12 @@
         private Label label3;
         private Label label8;
         private DateTimePicker dateTimePicker1;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button button2;
-        private Button button1;
+        private TextBox txtQuantity;
+        private TextBox txtPrice;
+        private TextBox txtPublication;
+        private TextBox txtAuthor;
+        private TextBox txtBookName;
+        private Button btnCancel;
+        private Button btnSave;
     }
 }
