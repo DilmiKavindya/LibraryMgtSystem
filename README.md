@@ -17,7 +17,6 @@ This **Library Management System** is a desktop application built using **C#** o
 - Borrow and return book functionality
 - Fine calculation for overdue books
 - Search and filter options for books and members
-- Basic reporting features
 
 ## 🚀 Getting Started
 
