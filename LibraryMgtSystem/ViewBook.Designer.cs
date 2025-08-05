@@ -36,9 +36,14 @@
             textBox1 = new TextBox();
             button1 = new Button();
             dataGridView1 = new DataGridView();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            panel2 = new Panel();
+            label3 = new Label();
+            label4 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -109,12 +114,50 @@
             dataGridView1.Size = new Size(959, 229);
             dataGridView1.TabIndex = 4;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(250, 125);
+            flowLayoutPanel1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ControlDark;
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label3);
+            panel2.Location = new Point(5, 437);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(959, 254);
+            panel2.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(38, 35);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 0;
+            label3.Text = "label3";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(454, 117);
+            label4.Name = "label4";
+            label4.Size = new Size(50, 20);
+            label4.TabIndex = 1;
+            label4.Text = "label4";
+            // 
             // ViewBook
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = Color.FromArgb(255, 192, 128);
-            ClientSize = new Size(968, 439);
+            ClientSize = new Size(968, 703);
+            Controls.Add(panel2);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(textBox1);
@@ -127,6 +170,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -140,5 +185,9 @@
         private TextBox textBox1;
         private Button button1;
         private DataGridView dataGridView1;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Panel panel2;
+        private Label label4;
+        private Label label3;
     }
 }
