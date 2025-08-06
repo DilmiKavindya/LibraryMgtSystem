@@ -10,7 +10,7 @@ This **Library Management System** is a desktop application built using **C#** o
 - **Framework**: .NET
 - **IDE**: Visual Studio
 - **Database**: SQL Server 
-- **Version Control**: Git & GitHub
+- **Version Control**: Git 
 
 ---
 
@@ -19,15 +19,14 @@ This **Library Management System** is a desktop application built using **C#** o
 ### 🔸 Frontend
 The frontend of this system is a **Windows Forms Application** developed using **C#** in **Visual Studio**. It provides a user-friendly graphical interface for:
 - Registering members
-- Adding, updating, and deleting books
+- Adding, updating, and books
 - Managing borrow/return actions
-- Viewing reports and records
+- Viewing books and records
 
 ### 🔸 Backend
 The backend logic is written in **C#**, which handles:
 - Business logic and validation
 - Interaction with the SQL Server database
-- Fine calculations and overdue book tracking
 - Error handling and user input validation
 
 ### 🔸 Database (SQL Server)
@@ -45,8 +44,7 @@ Stored procedures and SQL queries are used for efficient data operations.
 
 - 📘 Member registration and management  
 - 📚 Book cataloging and management  
-- 🔄 Borrow and return book functionality  
-- 💰 Fine calculation for overdue books  
+- 🔄 Borrow and return book functionality   
 - 🔍 Search and filter options for books and members  
 
 ---
