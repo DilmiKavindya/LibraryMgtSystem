@@ -13,8 +13,8 @@ This **Library Management System** is a desktop application built using **C#** o
 - Member registration and management
 - Book cataloging and management
 - Borrow and return book functionality
-- Fine calculation for overdue books
-- Search and filter options for books and members
+- Fine calculation for overdue book
+- Search and filter options for book and member
 
 ## 🚀 Getting Started
 
