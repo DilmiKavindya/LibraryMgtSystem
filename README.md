@@ -1,8 +1,6 @@
 # 📚 Library Management System
 
-This **Library Management System** is a desktop application built using **C#** on the **.NET Framework**, designed to help librarians manage books, members, borrowing, and returning processes efficiently.
-
----
+This **Library Management System** is a desktop application built using **C#** on the **.NET framework**, designed to help librarians manage books, members, borrowing, and returning processes efficiently.
 
 ## 🔧 Technologies Used
 
@@ -10,54 +8,25 @@ This **Library Management System** is a desktop application built using **C#** o
 - **Framework**: .NET
 - **IDE**: Visual Studio
 - **Database**: SQL Server 
-- **Version Control**: Git 
-
----
-
-## 🖥️ Architecture Overview
-
-### 🔸 Frontend
-The frontend of this system is a **Windows Forms Application** developed using **C#** in **Visual Studio**. It provides a user-friendly graphical interface for:
-- Registering members
-- Adding, updating, and books
-- Managing borrow/return actions
-- Viewing books and records
-
-### 🔸 Backend
-The backend logic is written in **C#**, which handles:
-- Business logic and validation
-- Interaction with the SQL Server database
-- Error handling and user input validation
-
-### 🔸 Database (SQL Server)
-The database stores all essential data including:
-- Book details
-- Member records
-- Borrowing and return transactions
-- Fine history
-
-Stored procedures and SQL queries are used for efficient data operations.
-
----
+- **Version Control**: Git & GitHub
 
 ## ✅ Features
 
-- 📘 Member registration and management  
-- 📚 Book cataloging and management  
-- 🔄 Borrow and return book functionality   
-- 🔍 Search and filter options for books and members  
-
----
+- Member registration and management
+- Book cataloging and management
+- Borrow and return book functionality
+- Fine calculation for overdue books
+- Search and filter options for books and members
 
 ## 🚀 Getting Started
 
-### ✅ Prerequisites
+### Prerequisites
 
 - Visual Studio 2022 
 - .NET Framework
 - SQL Server
 
-### 📥 Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/DilmiKavindya/LibraryManagementSystem.git
