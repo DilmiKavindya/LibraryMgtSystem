@@ -24,7 +24,6 @@ This **Library Management System** is a desktop application built using **C#** o
 
 - Visual Studio 2022 
 - .NET Framework
-- SQL Server
 
 ### Clone the Repository
 
