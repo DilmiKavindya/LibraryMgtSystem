@@ -34,7 +34,6 @@ The database stores all essential data including:
 - Book details
 - Member records
 - Borrowing and return transactions
-- Fine history
 
 Stored procedures and SQL queries are used for efficient data operations.
 
