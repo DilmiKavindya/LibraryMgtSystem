@@ -125,6 +125,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(959, 229);
             dataGridView1.TabIndex = 4;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // panel2
             // 
@@ -290,7 +291,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(255, 192, 128);
-            ClientSize = new Size(969, 607);
+            ClientSize = new Size(946, 473);
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
@@ -300,6 +301,7 @@
             Name = "ViewBook";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewBook";
+            Load += ViewBook_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
