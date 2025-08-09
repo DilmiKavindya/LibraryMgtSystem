@@ -59,4 +59,4 @@ Stored procedures and SQL queries are used for efficient data operations.
 ### 📥 Clone the Repository
 
 ```bash
-git clone https://github.com/DilmiKavindya/LibraryManagementSystem.git
+git clone https://github.com/DilmiKavindya/LibraryMgtSystem.git
