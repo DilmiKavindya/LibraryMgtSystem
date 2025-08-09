@@ -42,6 +42,15 @@ namespace LibraryMgtSystem
                 //MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             } 
             panel2.Visible = true;
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "Data Source=DILMI-LAP\\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;";
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+
+            cmd.CommandText = "SELECT * FROM NewBook";
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
         }
     }
 }
