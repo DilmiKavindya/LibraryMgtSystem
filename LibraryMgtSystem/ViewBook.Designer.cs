@@ -40,18 +40,18 @@
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
-            dateTimePicker1 = new DateTimePicker();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            this.txtQuantity = new TextBox();
+            txtPrice = new TextBox();
+            txtPublication = new TextBox();
+            txtAuthor = new TextBox();
+            txtBName = new TextBox();
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
+            txtPDate = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -130,15 +130,15 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ControlDark;
+            panel2.Controls.Add(txtPDate);
             panel2.Controls.Add(button4);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
-            panel2.Controls.Add(dateTimePicker1);
-            panel2.Controls.Add(textBox7);
-            panel2.Controls.Add(textBox6);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
+            panel2.Controls.Add(this.txtQuantity);
+            panel2.Controls.Add(txtPrice);
+            panel2.Controls.Add(txtPublication);
+            panel2.Controls.Add(txtAuthor);
+            panel2.Controls.Add(txtBName);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(label6);
@@ -183,47 +183,40 @@
             button2.Text = "Update";
             button2.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // txtQuantity
             // 
-            dateTimePicker1.Location = new Point(673, 30);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 12;
+            this.txtQuantity.Location = new Point(674, 131);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new Size(249, 27);
+            this.txtQuantity.TabIndex = 11;
             // 
-            // textBox7
+            // txtPrice
             // 
-            textBox7.Location = new Point(675, 131);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(249, 27);
-            textBox7.TabIndex = 11;
+            txtPrice.Location = new Point(674, 80);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(249, 27);
+            txtPrice.TabIndex = 10;
             // 
-            // textBox6
+            // txtPublication
             // 
-            textBox6.Location = new Point(674, 80);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(249, 27);
-            textBox6.TabIndex = 10;
+            txtPublication.Location = new Point(175, 131);
+            txtPublication.Name = "txtPublication";
+            txtPublication.Size = new Size(249, 27);
+            txtPublication.TabIndex = 8;
             // 
-            // textBox4
+            // txtAuthor
             // 
-            textBox4.Location = new Point(175, 131);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(249, 27);
-            textBox4.TabIndex = 8;
+            txtAuthor.Location = new Point(175, 80);
+            txtAuthor.Name = "txtAuthor";
+            txtAuthor.Size = new Size(249, 27);
+            txtAuthor.TabIndex = 7;
             // 
-            // textBox3
+            // txtBName
             // 
-            textBox3.Location = new Point(175, 80);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(249, 27);
-            textBox3.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(175, 25);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(249, 27);
-            textBox2.TabIndex = 6;
+            txtBName.Location = new Point(175, 25);
+            txtBName.Name = "txtBName";
+            txtBName.Size = new Size(249, 27);
+            txtBName.TabIndex = 6;
             // 
             // label8
             // 
@@ -285,13 +278,20 @@
             label3.TabIndex = 0;
             label3.Text = "Book Name";
             // 
+            // txtPDate
+            // 
+            txtPDate.Location = new Point(674, 30);
+            txtPDate.Name = "txtPDate";
+            txtPDate.Size = new Size(249, 27);
+            txtPDate.TabIndex = 16;
+            // 
             // ViewBook
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(255, 192, 128);
-            ClientSize = new Size(946, 473);
+            ClientSize = new Size(951, 473);
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
@@ -328,14 +328,15 @@
         private Label label7;
         private Label label6;
         private Label label5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox txtPublication;
+        private TextBox txtAuthor;
+        private TextBox txtBName;
         private Button button4;
         private Button button3;
         private Button button2;
         private DateTimePicker dateTimePicker1;
         private TextBox textBox7;
-        private TextBox textBox6;
+        private TextBox txtPrice;
+        private TextBox txtPDate;
     }
 }
