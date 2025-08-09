@@ -33,24 +33,27 @@ namespace LibraryMgtSystem
 
             dataGridView1.DataSource = ds.Tables[0];
         }
-        int bid;
+        int BookId;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                bid = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                BookId = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 //MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-            } 
+            }
             panel2.Visible = true;
             SqlConnection con = new SqlConnection();
             con.ConnectionString = "Data Source=DILMI-LAP\\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;";
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
 
-            cmd.CommandText = "SELECT * FROM NewBook";
+            cmd.CommandText = "SELECT * FROM NewBook where BookId = " + BookId + "";
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
+
+            txtBName.Text = ds.Tables[0].Rows[0][1].ToString();
+            //txtQuantity.Text = ds.Tables[0].Rows[0][6].ToString();
         }
     }
 }

@@ -133,6 +133,7 @@
             // btnCancel
             // 
             btnCancel.FlatStyle = FlatStyle.Popup;
+            btnCancel.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancel.Location = new Point(338, 302);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(94, 29);
@@ -144,7 +145,8 @@
             // btnSave
             // 
             btnSave.FlatStyle = FlatStyle.Popup;
-            btnSave.Location = new Point(187, 302);
+            btnSave.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSave.Location = new Point(215, 302);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(94, 29);
             btnSave.TabIndex = 12;
@@ -264,6 +266,7 @@
             Controls.Add(pictureBox1);
             Name = "AddBooks";
             Text = "AddBooks";
+            Load += AddBooks_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

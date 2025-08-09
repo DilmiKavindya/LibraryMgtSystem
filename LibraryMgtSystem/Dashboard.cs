@@ -34,7 +34,7 @@ namespace LibraryMgtSystem
         private void viewNewBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ViewBook vb = new ViewBook();
-            vb.Show(); 
+            vb.Show();
         }
     }
 }

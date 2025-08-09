@@ -53,7 +53,7 @@ namespace LibraryMgtSystem
             string connStr = "Data Source=DILMI-LAP\\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;";
 
             string insertQuery = @"
-            INSERT INTO NewBook (bName, bAuthor, bPub, bPDate, bPrice, bQuan)
+            INSERT INTO NewBook (BookName, BookAuthor, BookPublication, BookPurchaseDate, BookPrice, BookQuantity)
             VALUES (@name, @author, @pub, @pdate, @price, @quan);";
 
             try
@@ -73,6 +73,7 @@ namespace LibraryMgtSystem
                     if (rows > 0)
                     {
                         MessageBox.Show("Data Saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearFields(); // Clear fields after save
                     }
                     else
                     {
@@ -96,6 +97,29 @@ namespace LibraryMgtSystem
             {
                 this.Close(); // Close the AddBooks form
             }
+        }
+
+        private void AddBooks_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            ClearFields(); // Clears all fields when refresh button clicked
+        }
+
+        // Helper method to clear all text fields
+        private void ClearFields()
+        {
+            txtBookName.Clear();
+            txtAuthor.Clear();
+            txtPublication.Clear();
+            txtPrice.Clear();
+            txtQuantity.Clear();
+
+            // Optional: set focus back to the first input
+            txtBookName.Focus();
         }
     }
 }
