@@ -53,7 +53,11 @@ namespace LibraryMgtSystem
             da.Fill(ds);
 
             txtBName.Text = ds.Tables[0].Rows[0][1].ToString();
-            //txtQuantity.Text = ds.Tables[0].Rows[0][6].ToString();
+            txtAuthor.Text = ds.Tables[0].Rows[0][2].ToString();
+            txtPublication.Text = ds.Tables[0].Rows[0][3].ToString();
+            txtPDate.Text = ds.Tables[0].Rows[0][4].ToString();
+            txtPrice.Text = ds.Tables[0].Rows[0][5].ToString();
+            txtQuantity.Text = ds.Tables[0].Rows[0][6].ToString();
         }
     }
 }
