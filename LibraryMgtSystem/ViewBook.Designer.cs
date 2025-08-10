@@ -33,7 +33,7 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtBNSearch = new TextBox();
             btnRefresh = new Button();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
@@ -99,12 +99,13 @@
             label2.TabIndex = 1;
             label2.Text = "Book Name";
             // 
-            // textBox1
+            // txtBNSearch
             // 
-            textBox1.Location = new Point(376, 155);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(249, 27);
-            textBox1.TabIndex = 2;
+            txtBNSearch.Location = new Point(376, 155);
+            txtBNSearch.Name = "txtBNSearch";
+            txtBNSearch.Size = new Size(249, 27);
+            txtBNSearch.TabIndex = 2;
+            txtBNSearch.TextChanged += txtBNSearch_TextChanged;
             // 
             // btnRefresh
             // 
@@ -116,6 +117,7 @@
             btnRefresh.TabIndex = 3;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // dataGridView1
             // 
@@ -161,6 +163,7 @@
             btnCancel.TabIndex = 14;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnDelete
             // 
@@ -172,6 +175,7 @@
             btnDelete.TabIndex = 13;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
@@ -183,6 +187,7 @@
             btnUpdate.TabIndex = 12;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // txtQuantity
             // 
@@ -296,7 +301,7 @@
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
             Controls.Add(btnRefresh);
-            Controls.Add(textBox1);
+            Controls.Add(txtBNSearch);
             Controls.Add(label2);
             Controls.Add(panel1);
             Name = "ViewBook";
@@ -318,7 +323,7 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtBNSearch;
         private Button btnRefresh;
         private DataGridView dataGridView1;
         private Panel panel2;
