@@ -20,7 +20,7 @@ This **Library Management System** is a desktop application built using **C#** o
 The frontend of this system is a **Windows Forms Application** developed using **C#** in **Visual Studio**. It provides a user-friendly graphical interface for:
 - Registering members
 - Adding, updating, and books
-- Managing borrow/return actions
+- Managing return actions
 - Viewing books and records
 
 ### 🔸 Backend
@@ -35,7 +35,7 @@ The database stores all essential data including:
 - Member records
 - Borrowing and return transactions
 
-Stored procedures and SQL queries are used for efficient data operations.
+SQL queries are used for efficient data operations.
 
 ---
 
