@@ -55,7 +55,7 @@ SQL queries are used for efficient data operations.
 - Visual Studio 2022 
 - .NET Framework
 - SQL Server
---------------------------------------------------------------------------------
+
 ### 📥 Clone the Repository
 
 ```bash
