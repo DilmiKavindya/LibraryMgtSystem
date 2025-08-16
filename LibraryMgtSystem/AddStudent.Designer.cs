@@ -262,6 +262,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(panel1);
             Name = "AddStudent";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddStudent";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

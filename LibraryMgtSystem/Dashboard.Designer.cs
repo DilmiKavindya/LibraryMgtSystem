@@ -161,6 +161,7 @@
             FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
             Name = "Dashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
