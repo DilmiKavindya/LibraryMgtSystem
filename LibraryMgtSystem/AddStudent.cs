@@ -28,6 +28,12 @@ namespace LibraryMgtSystem
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            ClearFields();
+        }
+
+        //Reusable method to clear all fields
+        private void ClearFields()
+        {
             txtName.Clear();
             txtEnrollment.Clear();
             txtDepartment.Clear();
@@ -47,18 +53,21 @@ namespace LibraryMgtSystem
                 Int64 mobile = Int64.Parse(txtContact.Text);
                 String email = txtEmail.Text;
 
-                using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-8K9F4Q0;Initial Catalog=LibraryMgtSystem;Integrated Security=True"))
+                string connectionString =
+                    @"Data Source=DILMI-LAP\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;";
+
+                using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = "INSERT INTO NewStudent (stName, enroll, dep, sem, contact, email) " +
-                                   "VALUES (@stName, @enroll, @dep, @sem, @contact, @email)";
+                    string query = "INSERT INTO NewStudent (studentName, enrollmentNo, department, semester, contactNo, email) " +
+                                   "VALUES (@studentName, @enrollmentNo, @department, @semester, @contactNo, @email)";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@stName", name);
-                        cmd.Parameters.AddWithValue("@enroll", enrollment);
-                        cmd.Parameters.AddWithValue("@dep", department);
-                        cmd.Parameters.AddWithValue("@sem", semester);
-                        cmd.Parameters.AddWithValue("@contact", mobile);
+                        cmd.Parameters.AddWithValue("@studentName", name);
+                        cmd.Parameters.AddWithValue("@enrollmentNo", enrollment);
+                        cmd.Parameters.AddWithValue("@department", department);
+                        cmd.Parameters.AddWithValue("@semester", semester);
+                        cmd.Parameters.AddWithValue("@contactNo", mobile);
                         cmd.Parameters.AddWithValue("@email", email);
 
                         con.Open();
@@ -68,6 +77,9 @@ namespace LibraryMgtSystem
                 }
 
                 MessageBox.Show("Data Saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Clear fields after saving
+                ClearFields();
             }
             catch (Exception ex)
             {
