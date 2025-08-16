@@ -34,16 +34,16 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             panel2 = new Panel();
-            textBox6 = new TextBox();
+            txtEmail = new TextBox();
             label7 = new Label();
             btnCancel = new Button();
             btnSave = new Button();
             btnRefresh = new Button();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtContact = new TextBox();
+            txtSemester = new TextBox();
+            txtDepartment = new TextBox();
+            txtEnrollment = new TextBox();
+            txtName = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -98,16 +98,16 @@
             // panel2
             // 
             panel2.BackColor = Color.Gray;
-            panel2.Controls.Add(textBox6);
+            panel2.Controls.Add(txtEmail);
             panel2.Controls.Add(label7);
             panel2.Controls.Add(btnCancel);
             panel2.Controls.Add(btnSave);
             panel2.Controls.Add(btnRefresh);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtContact);
+            panel2.Controls.Add(txtSemester);
+            panel2.Controls.Add(txtDepartment);
+            panel2.Controls.Add(txtEnrollment);
+            panel2.Controls.Add(txtName);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
@@ -118,12 +118,12 @@
             panel2.Size = new Size(414, 323);
             panel2.TabIndex = 2;
             // 
-            // textBox6
+            // txtEmail
             // 
-            textBox6.Location = new Point(163, 219);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(215, 27);
-            textBox6.TabIndex = 14;
+            txtEmail.Location = new Point(163, 219);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(215, 27);
+            txtEmail.TabIndex = 14;
             // 
             // label7
             // 
@@ -145,6 +145,7 @@
             btnCancel.TabIndex = 12;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
@@ -156,6 +157,7 @@
             btnSave.TabIndex = 11;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnRefresh
             // 
@@ -167,41 +169,42 @@
             btnRefresh.TabIndex = 10;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
-            // textBox5
+            // txtContact
             // 
-            textBox5.Location = new Point(163, 180);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(215, 27);
-            textBox5.TabIndex = 9;
+            txtContact.Location = new Point(163, 180);
+            txtContact.Name = "txtContact";
+            txtContact.Size = new Size(215, 27);
+            txtContact.TabIndex = 9;
             // 
-            // textBox4
+            // txtSemester
             // 
-            textBox4.Location = new Point(163, 140);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(215, 27);
-            textBox4.TabIndex = 8;
+            txtSemester.Location = new Point(163, 140);
+            txtSemester.Name = "txtSemester";
+            txtSemester.Size = new Size(215, 27);
+            txtSemester.TabIndex = 8;
             // 
-            // textBox3
+            // txtDepartment
             // 
-            textBox3.Location = new Point(163, 100);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(215, 27);
-            textBox3.TabIndex = 7;
+            txtDepartment.Location = new Point(163, 100);
+            txtDepartment.Name = "txtDepartment";
+            txtDepartment.Size = new Size(215, 27);
+            txtDepartment.TabIndex = 7;
             // 
-            // textBox2
+            // txtEnrollment
             // 
-            textBox2.Location = new Point(163, 60);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(215, 27);
-            textBox2.TabIndex = 6;
+            txtEnrollment.Location = new Point(163, 60);
+            txtEnrollment.Name = "txtEnrollment";
+            txtEnrollment.Size = new Size(215, 27);
+            txtEnrollment.TabIndex = 6;
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.Location = new Point(163, 20);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(215, 27);
-            textBox1.TabIndex = 5;
+            txtName.Location = new Point(163, 20);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(215, 27);
+            txtName.TabIndex = 5;
             // 
             // label6
             // 
@@ -280,7 +283,7 @@
         private Label label1;
         private PictureBox pictureBox2;
         private Panel panel2;
-        private TextBox textBox1;
+        private TextBox txtName;
         private Label label6;
         private Label label5;
         private Label label4;
@@ -289,11 +292,11 @@
         private Button btnCancel;
         private Button btnSave;
         private Button btnRefresh;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox6;
+        private TextBox txtContact;
+        private TextBox txtSemester;
+        private TextBox txtDepartment;
+        private TextBox txtEnrollment;
+        private TextBox txtEmail;
         private Label label7;
     }
 }
