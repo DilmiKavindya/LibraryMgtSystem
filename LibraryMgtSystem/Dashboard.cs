@@ -36,5 +36,11 @@ namespace LibraryMgtSystem
             ViewBook vb = new ViewBook();
             vb.Show();
         }
+
+        private void addNewStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddStudent ast = new AddStudent();
+            ast.Show();
+        }
     }
 }
