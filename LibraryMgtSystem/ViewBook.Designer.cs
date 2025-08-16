@@ -305,6 +305,7 @@
             Controls.Add(label2);
             Controls.Add(panel1);
             Name = "ViewBook";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewBook";
             Load += ViewBook_Load;
             panel1.ResumeLayout(false);

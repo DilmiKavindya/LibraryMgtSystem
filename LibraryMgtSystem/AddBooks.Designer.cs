@@ -265,6 +265,7 @@
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
             Name = "AddBooks";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AddBooks";
             Load += AddBooks_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
