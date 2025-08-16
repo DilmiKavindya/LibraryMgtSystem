@@ -69,7 +69,7 @@
             addNewBookToolStripMenuItem.Image = (Image)resources.GetObject("addNewBookToolStripMenuItem.Image");
             addNewBookToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             addNewBookToolStripMenuItem.Name = "addNewBookToolStripMenuItem";
-            addNewBookToolStripMenuItem.Size = new Size(254, 56);
+            addNewBookToolStripMenuItem.Size = new Size(215, 56);
             addNewBookToolStripMenuItem.Text = "Add New Book";
             addNewBookToolStripMenuItem.Click += addNewBookToolStripMenuItem_Click;
             // 
@@ -78,7 +78,7 @@
             viewNewBooksToolStripMenuItem.Image = (Image)resources.GetObject("viewNewBooksToolStripMenuItem.Image");
             viewNewBooksToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             viewNewBooksToolStripMenuItem.Name = "viewNewBooksToolStripMenuItem";
-            viewNewBooksToolStripMenuItem.Size = new Size(254, 56);
+            viewNewBooksToolStripMenuItem.Size = new Size(215, 56);
             viewNewBooksToolStripMenuItem.Text = "View Books";
             viewNewBooksToolStripMenuItem.Click += viewNewBooksToolStripMenuItem_Click;
             // 
@@ -100,6 +100,7 @@
             addNewStudentToolStripMenuItem.Name = "addNewStudentToolStripMenuItem";
             addNewStudentToolStripMenuItem.Size = new Size(254, 56);
             addNewStudentToolStripMenuItem.Text = "Add New Student";
+            addNewStudentToolStripMenuItem.Click += addNewStudentToolStripMenuItem_Click;
             // 
             // viewStudentDetailsToolStripMenuItem
             // 
