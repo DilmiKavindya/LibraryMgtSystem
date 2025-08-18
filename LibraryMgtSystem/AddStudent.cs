@@ -44,6 +44,42 @@ namespace LibraryMgtSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            // Basic validation (you can expand this)
+            if (string.IsNullOrWhiteSpace(txtName.Text) ||
+                string.IsNullOrWhiteSpace(txtEnrollment.Text) ||
+                string.IsNullOrWhiteSpace(txtDepartment.Text) ||
+                string.IsNullOrWhiteSpace(txtSemester.Text) ||
+                string.IsNullOrWhiteSpace(txtContact.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                MessageBox.Show("Please fill all fields.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ✅ Contact number validation (only digits, 10 characters)
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtContact.Text.Trim(), @"^\d{10}$"))
+            {
+                MessageBox.Show("Contact number must be exactly 10 digits.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ✅ Email validation
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(txtEmail.Text.Trim());
+                if (addr.Address != txtEmail.Text.Trim())
+                {
+                    MessageBox.Show("Invalid email address format.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Invalid email address format.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 String name = txtName.Text;
