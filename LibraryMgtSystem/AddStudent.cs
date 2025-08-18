@@ -57,14 +57,14 @@ namespace LibraryMgtSystem
                 return;
             }
 
-            // ✅ Contact number validation (only digits, 10 characters)
+            // Contact number validation (only digits, 10 characters)
             if (!System.Text.RegularExpressions.Regex.IsMatch(txtContact.Text.Trim(), @"^\d{10}$"))
             {
                 MessageBox.Show("Contact number must be exactly 10 digits.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // ✅ Email validation
+            // Email validation
             try
             {
                 var addr = new System.Net.Mail.MailAddress(txtEmail.Text.Trim());
