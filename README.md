@@ -17,7 +17,7 @@ This **Library Management System** is a desktop application built using **C#** o
 ## 🖥️ Architecture Overview
 
 ### 🔸 Frontend
-The frontend of this system is a **Windows Forms Application** developed using **C#** in **Visual Studio**. It provides a user-friendly graphical interface for:
+The frontend of this system is a **Windows Forms Application** developed using **C#** in **Visual Studio**. It provides a user-friendly graphical interface for
 - Registering members
 - Adding, updating, and books
 - Managing return actions
