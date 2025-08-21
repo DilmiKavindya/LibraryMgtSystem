@@ -45,7 +45,7 @@ SQL queries are used for efficient data operations.
 - 📘 Member registration and management  
 - 📚 Book cataloging and management  
 - 🔄 Borrow and return book functionality   
-- 🔍 Search and filter options for books and members  
+- 🔍 Search and filter options for books and members  hg
 
 ---
 
