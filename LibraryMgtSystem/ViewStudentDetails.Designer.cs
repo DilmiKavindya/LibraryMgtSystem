@@ -28,18 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panel1 = new Panel();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.White;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(967, 140);
+            panel1.TabIndex = 0;
             // 
             // ViewStudentDetails
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(968, 453);
+            Controls.Add(panel1);
             Name = "ViewStudentDetails";
             Text = "ViewStudentDetails";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
     }
 }
