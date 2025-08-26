@@ -38,21 +38,21 @@
             btnRefresh = new Button();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            btnUpdate = new Button();
-            btnDelete = new Button();
             btnCancel = new Button();
+            btnDelete = new Button();
+            btnUpdate = new Button();
+            textBox7 = new TextBox();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -166,118 +166,16 @@
             panel2.Size = new Size(967, 274);
             panel2.TabIndex = 5;
             // 
-            // label4
+            // btnCancel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 9F);
-            label4.Location = new Point(73, 32);
-            label4.Name = "label4";
-            label4.Size = new Size(101, 17);
-            label4.TabIndex = 0;
-            label4.Text = "Student Name";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial", 9F);
-            label5.Location = new Point(73, 86);
-            label5.Name = "label5";
-            label5.Size = new Size(104, 17);
-            label5.TabIndex = 1;
-            label5.Text = "Enrollment No.";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial", 9F);
-            label6.Location = new Point(73, 142);
-            label6.Name = "label6";
-            label6.Size = new Size(85, 17);
-            label6.TabIndex = 2;
-            label6.Text = "Department";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial", 9F);
-            label7.Location = new Point(537, 32);
-            label7.Name = "label7";
-            label7.Size = new Size(72, 17);
-            label7.TabIndex = 3;
-            label7.Text = "Semester";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Arial", 9F);
-            label8.Location = new Point(537, 86);
-            label8.Name = "label8";
-            label8.Size = new Size(85, 17);
-            label8.TabIndex = 4;
-            label8.Text = "Contact No.";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Arial", 9F);
-            label9.Location = new Point(537, 142);
-            label9.Name = "label9";
-            label9.Size = new Size(45, 17);
-            label9.TabIndex = 5;
-            label9.Text = "Email";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(182, 32);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(232, 27);
-            textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(182, 86);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(232, 27);
-            textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(182, 138);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(232, 27);
-            textBox4.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(650, 32);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(232, 27);
-            textBox5.TabIndex = 9;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(650, 84);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(232, 27);
-            textBox6.TabIndex = 10;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(650, 136);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(232, 27);
-            textBox7.TabIndex = 11;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.FlatStyle = FlatStyle.Popup;
-            btnUpdate.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUpdate.Location = new Point(537, 205);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(94, 29);
-            btnUpdate.TabIndex = 12;
-            btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = true;
+            btnCancel.FlatStyle = FlatStyle.Popup;
+            btnCancel.Font = new Font("Arial", 9F);
+            btnCancel.Location = new Point(783, 205);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(94, 29);
+            btnCancel.TabIndex = 14;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
@@ -290,16 +188,118 @@
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             // 
-            // btnCancel
+            // btnUpdate
             // 
-            btnCancel.FlatStyle = FlatStyle.Popup;
-            btnCancel.Font = new Font("Arial", 9F);
-            btnCancel.Location = new Point(783, 205);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(94, 29);
-            btnCancel.TabIndex = 14;
-            btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
+            btnUpdate.FlatStyle = FlatStyle.Popup;
+            btnUpdate.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUpdate.Location = new Point(537, 205);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(94, 29);
+            btnUpdate.TabIndex = 12;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(650, 136);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(232, 27);
+            textBox7.TabIndex = 11;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(650, 84);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(232, 27);
+            textBox6.TabIndex = 10;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(650, 32);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(232, 27);
+            textBox5.TabIndex = 9;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(182, 138);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(232, 27);
+            textBox4.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(182, 86);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(232, 27);
+            textBox3.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(182, 32);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(232, 27);
+            textBox2.TabIndex = 6;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Arial", 9F);
+            label9.Location = new Point(537, 142);
+            label9.Name = "label9";
+            label9.Size = new Size(45, 17);
+            label9.TabIndex = 5;
+            label9.Text = "Email";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial", 9F);
+            label8.Location = new Point(537, 86);
+            label8.Name = "label8";
+            label8.Size = new Size(85, 17);
+            label8.TabIndex = 4;
+            label8.Text = "Contact No.";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial", 9F);
+            label7.Location = new Point(537, 32);
+            label7.Name = "label7";
+            label7.Size = new Size(72, 17);
+            label7.TabIndex = 3;
+            label7.Text = "Semester";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 9F);
+            label6.Location = new Point(73, 142);
+            label6.Name = "label6";
+            label6.Size = new Size(85, 17);
+            label6.TabIndex = 2;
+            label6.Text = "Department";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial", 9F);
+            label5.Location = new Point(73, 86);
+            label5.Name = "label5";
+            label5.Size = new Size(104, 17);
+            label5.TabIndex = 1;
+            label5.Text = "Enrollment No.";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 9F);
+            label4.Location = new Point(73, 32);
+            label4.Name = "label4";
+            label4.Size = new Size(101, 17);
+            label4.TabIndex = 0;
+            label4.Text = "Student Name";
             // 
             // ViewStudentDetails
             // 
@@ -315,6 +315,7 @@
             Controls.Add(label3);
             Controls.Add(panel1);
             Name = "ViewStudentDetails";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewStudentDetails";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
