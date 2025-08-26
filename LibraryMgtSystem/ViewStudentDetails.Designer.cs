@@ -34,7 +34,7 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtSearchEnrollment = new TextBox();
             btnRefresh = new Button();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
@@ -113,13 +113,14 @@
             label3.TabIndex = 1;
             label3.Text = "Enrollment No.";
             // 
-            // textBox1
+            // txtSearchEnrollment
             // 
-            textBox1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(357, 145);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(201, 25);
-            textBox1.TabIndex = 2;
+            txtSearchEnrollment.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSearchEnrollment.Location = new Point(357, 145);
+            txtSearchEnrollment.Name = "txtSearchEnrollment";
+            txtSearchEnrollment.Size = new Size(201, 25);
+            txtSearchEnrollment.TabIndex = 2;
+            txtSearchEnrollment.TextChanged += txtSearchEnrollment_TextChanged;
             // 
             // btnRefresh
             // 
@@ -311,7 +312,7 @@
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
             Controls.Add(btnRefresh);
-            Controls.Add(textBox1);
+            Controls.Add(txtSearchEnrollment);
             Controls.Add(label3);
             Controls.Add(panel1);
             Name = "ViewStudentDetails";
@@ -334,7 +335,7 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtSearchEnrollment;
         private Button btnRefresh;
         private DataGridView dataGridView1;
         private Panel panel2;
