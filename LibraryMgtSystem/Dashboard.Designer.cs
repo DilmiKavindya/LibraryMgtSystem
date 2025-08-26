@@ -109,6 +109,7 @@
             viewStudentDetailsToolStripMenuItem.Name = "viewStudentDetailsToolStripMenuItem";
             viewStudentDetailsToolStripMenuItem.Size = new Size(254, 56);
             viewStudentDetailsToolStripMenuItem.Text = "View Student Details";
+            viewStudentDetailsToolStripMenuItem.Click += viewStudentDetailsToolStripMenuItem_Click;
             // 
             // issueBooksToolStripMenuItem
             // 
