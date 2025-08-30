@@ -37,7 +37,7 @@ The database stores all essential data including:
 
 SQL queries are used for efficient data operations.
 
----=
+---
 
 
 ## ✅ Features
