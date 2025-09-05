@@ -318,6 +318,7 @@
             Name = "ViewStudentDetails";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewStudentDetails";
+            Load += ViewStudentDetails_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
