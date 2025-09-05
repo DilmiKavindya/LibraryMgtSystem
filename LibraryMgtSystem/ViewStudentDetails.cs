@@ -26,7 +26,8 @@ namespace LibraryMgtSystem
         {
             if(txtSearchEnrollment.Text != "")
             {
-               Image image = Image.FromFile("D://LibraryManagementSystem//LibraryMgtSystem//Icons/search1.gif");
+                label1.Visible = false;
+                Image image = Image.FromFile("D://LibraryManagementSystem//LibraryMgtSystem//Icons/search1.gif");
                pictureBox1.Image = image;
             }
             else
