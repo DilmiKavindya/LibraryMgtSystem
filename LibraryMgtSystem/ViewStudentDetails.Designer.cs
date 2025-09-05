@@ -171,7 +171,7 @@
             // 
             btnCancel.FlatStyle = FlatStyle.Popup;
             btnCancel.Font = new Font("Arial", 9F);
-            btnCancel.Location = new Point(783, 205);
+            btnCancel.Location = new Point(784, 205);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(94, 29);
             btnCancel.TabIndex = 14;
@@ -182,7 +182,7 @@
             // 
             btnDelete.FlatStyle = FlatStyle.Popup;
             btnDelete.Font = new Font("Arial", 9F);
-            btnDelete.Location = new Point(659, 205);
+            btnDelete.Location = new Point(660, 205);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(94, 29);
             btnDelete.TabIndex = 13;
@@ -193,7 +193,7 @@
             // 
             btnUpdate.FlatStyle = FlatStyle.Popup;
             btnUpdate.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnUpdate.Location = new Point(537, 205);
+            btnUpdate.Location = new Point(538, 205);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(94, 29);
             btnUpdate.TabIndex = 12;
