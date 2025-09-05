@@ -22,6 +22,7 @@ namespace LibraryMgtSystem
 
         }
 
+
         private void txtSearchEnrollment_TextChanged(object sender, EventArgs e)
         {
             if (txtSearchEnrollment.Text != "")
