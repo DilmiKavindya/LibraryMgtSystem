@@ -24,16 +24,23 @@ namespace LibraryMgtSystem
 
         private void txtSearchEnrollment_TextChanged(object sender, EventArgs e)
         {
-            if(txtSearchEnrollment.Text != "")
+            if (txtSearchEnrollment.Text != "")
             {
                 label1.Visible = false;
                 Image image = Image.FromFile("D://LibraryManagementSystem//LibraryMgtSystem//Icons/search1.gif");
-               pictureBox1.Image = image;
+                pictureBox1.Image = image;
             }
             else
             {
-               
+                label1.Visible = true;
+                Image image = Image.FromFile("D://LibraryManagementSystem//LibraryMgtSystem//Icons/search.gif");
+                pictureBox1.Image = image;
             }
+        }
+
+        private void ViewStudentDetails_Load(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
         }
     }
 }
