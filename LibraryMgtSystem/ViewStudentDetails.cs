@@ -20,7 +20,7 @@ namespace LibraryMgtSystem
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            // Optional: handle if you need clicks inside grid cells
         }
 
         private void txtSearchEnrollment_TextChanged(object sender, EventArgs e)
@@ -28,8 +28,7 @@ namespace LibraryMgtSystem
             if (txtSearchEnrollment.Text != "")
             {
                 label1.Visible = false;
-                Image image = Image.FromFile("D://LibraryManagementSystem//LibraryMgtSystem//Icons/search1.gif");
-                pictureBox1.Image = image;
+                pictureBox1.Image = Image.FromFile("D://LibraryManagementSystem//LibraryMgtSystem//Icons/search1.gif");
 
                 using (SqlConnection con = new SqlConnection("Data Source=DILMI-LAP\\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;"))
                 {
@@ -58,9 +57,7 @@ namespace LibraryMgtSystem
             else
             {
                 label1.Visible = true;
-                Image image = Image.FromFile("D://LibraryManagementSystem//LibraryMgtSystem//Icons/search.gif");
-                pictureBox1.Image = image;
-
+                pictureBox1.Image = Image.FromFile("D://LibraryManagementSystem//LibraryMgtSystem//Icons/search.gif");
                 LoadAllStudents();
             }
         }
@@ -83,6 +80,96 @@ namespace LibraryMgtSystem
                     DA.Fill(DS);
 
                     dataGridView1.DataSource = DS.Tables[0];
+                }
+            }
+        }
+
+        int StudentId;
+        Int64 rowid;
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // prevent error when clicking header row
+            {
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    StudentId = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                }
+
+                panel2.Visible = true;
+
+                using (SqlConnection con = new SqlConnection("Data Source=DILMI-LAP\\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;"))
+                {
+                    string query = "SELECT * FROM NewStudent WHERE StudentId = @id";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@id", StudentId);
+
+                        SqlDataAdapter DA = new SqlDataAdapter(cmd);
+                        DataSet DS = new DataSet();
+                        DA.Fill(DS);
+
+                        if (DS.Tables[0].Rows.Count > 0)
+                        {
+                            rowid = Int64.Parse(DS.Tables[0].Rows[0][0].ToString());
+                            txtStName.Text = DS.Tables[0].Rows[0][1].ToString();
+                            txtEnNo.Text = DS.Tables[0].Rows[0][2].ToString();
+                            txtDepartment.Text = DS.Tables[0].Rows[0][3].ToString();
+                            txtSemester.Text = DS.Tables[0].Rows[0][4].ToString();
+                            txtConNo.Text = DS.Tables[0].Rows[0][5].ToString();
+                            txtEmail.Text = DS.Tables[0].Rows[0][6].ToString();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string stname = txtStName.Text.Trim();
+            string enno = txtEnNo.Text.Trim();
+            string dep = txtDepartment.Text.Trim();
+            string sem = txtSemester.Text.Trim();
+            string conno = txtConNo.Text.Trim();
+            string email = txtEmail.Text.Trim();
+
+            if (MessageBox.Show("Data will be Updated. Confirm?", "Confirm Update", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                using (SqlConnection con = new SqlConnection("Data Source=DILMI-LAP\\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;"))
+                {
+                    string query = @"UPDATE NewStudent 
+                                     SET studentName = @stname,
+                                         enrollmentNo = @enno,
+                                         department = @dep,
+                                         semester = @sem,
+                                         contactNo = @conno,
+                                         email = @email
+                                     WHERE StudentId = @id";
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@stname", stname);
+                        cmd.Parameters.AddWithValue("@enno", enno);
+                        cmd.Parameters.AddWithValue("@dep", dep);
+                        cmd.Parameters.AddWithValue("@sem", sem);
+                        cmd.Parameters.AddWithValue("@conno", conno);
+                        cmd.Parameters.AddWithValue("@email", email);
+                        cmd.Parameters.AddWithValue("@id", rowid);
+
+                        con.Open();
+                        int rows = cmd.ExecuteNonQuery();
+                        con.Close();
+
+                        if (rows > 0)
+                        {
+                           // MessageBox.Show("Student details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadAllStudents();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Update failed. Please check again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
             }
         }

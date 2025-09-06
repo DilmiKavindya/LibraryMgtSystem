@@ -41,12 +41,12 @@
             btnCancel = new Button();
             btnDelete = new Button();
             btnUpdate = new Button();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            txtEmail = new TextBox();
+            txtConNo = new TextBox();
+            txtSemester = new TextBox();
+            txtDepartment = new TextBox();
+            txtEnNo = new TextBox();
+            txtStName = new TextBox();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
@@ -142,6 +142,7 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(967, 254);
             dataGridView1.TabIndex = 4;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // panel2
@@ -150,12 +151,12 @@
             panel2.Controls.Add(btnCancel);
             panel2.Controls.Add(btnDelete);
             panel2.Controls.Add(btnUpdate);
-            panel2.Controls.Add(textBox7);
-            panel2.Controls.Add(textBox6);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
+            panel2.Controls.Add(txtEmail);
+            panel2.Controls.Add(txtConNo);
+            panel2.Controls.Add(txtSemester);
+            panel2.Controls.Add(txtDepartment);
+            panel2.Controls.Add(txtEnNo);
+            panel2.Controls.Add(txtStName);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label7);
@@ -199,48 +200,49 @@
             btnUpdate.TabIndex = 12;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
-            // textBox7
+            // txtEmail
             // 
-            textBox7.Location = new Point(650, 136);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(232, 27);
-            textBox7.TabIndex = 11;
+            txtEmail.Location = new Point(650, 136);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(232, 27);
+            txtEmail.TabIndex = 11;
             // 
-            // textBox6
+            // txtConNo
             // 
-            textBox6.Location = new Point(650, 84);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(232, 27);
-            textBox6.TabIndex = 10;
+            txtConNo.Location = new Point(650, 84);
+            txtConNo.Name = "txtConNo";
+            txtConNo.Size = new Size(232, 27);
+            txtConNo.TabIndex = 10;
             // 
-            // textBox5
+            // txtSemester
             // 
-            textBox5.Location = new Point(650, 32);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(232, 27);
-            textBox5.TabIndex = 9;
+            txtSemester.Location = new Point(650, 32);
+            txtSemester.Name = "txtSemester";
+            txtSemester.Size = new Size(232, 27);
+            txtSemester.TabIndex = 9;
             // 
-            // textBox4
+            // txtDepartment
             // 
-            textBox4.Location = new Point(182, 138);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(232, 27);
-            textBox4.TabIndex = 8;
+            txtDepartment.Location = new Point(182, 138);
+            txtDepartment.Name = "txtDepartment";
+            txtDepartment.Size = new Size(232, 27);
+            txtDepartment.TabIndex = 8;
             // 
-            // textBox3
+            // txtEnNo
             // 
-            textBox3.Location = new Point(182, 86);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(232, 27);
-            textBox3.TabIndex = 7;
+            txtEnNo.Location = new Point(182, 86);
+            txtEnNo.Name = "txtEnNo";
+            txtEnNo.Size = new Size(232, 27);
+            txtEnNo.TabIndex = 7;
             // 
-            // textBox2
+            // txtStName
             // 
-            textBox2.Location = new Point(182, 32);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(232, 27);
-            textBox2.TabIndex = 6;
+            txtStName.Location = new Point(182, 32);
+            txtStName.Name = "txtStName";
+            txtStName.Size = new Size(232, 27);
+            txtStName.TabIndex = 6;
             // 
             // label9
             // 
@@ -343,12 +345,12 @@
         private Button btnCancel;
         private Button btnDelete;
         private Button btnUpdate;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox txtEmail;
+        private TextBox txtConNo;
+        private TextBox txtSemester;
+        private TextBox txtDepartment;
+        private TextBox txtEnNo;
+        private TextBox txtStName;
         private Label label9;
         private Label label8;
         private Label label7;
