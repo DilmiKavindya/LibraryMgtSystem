@@ -22,7 +22,7 @@ namespace LibraryMgtSystem
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Optional: handle if you need clicks inside grid cells
+
         }
 
         private void txtSearchEnrollment_TextChanged(object sender, EventArgs e)
@@ -190,12 +190,20 @@ namespace LibraryMgtSystem
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
 
-                cmd.CommandText = "DELETE FROM NewStudent WHERE studentId = "+rowid+"";
+                cmd.CommandText = "DELETE FROM NewStudent WHERE studentId = " + rowid + "";
                 SqlDataAdapter DA = new SqlDataAdapter(cmd);
                 DataSet DS = new DataSet();
                 DA.Fill(DS);
 
                 ViewStudentDetails_Load(this, null);
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Unsaved Data will be Lost.", "Are You Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.Close();
             }
         }
     }
