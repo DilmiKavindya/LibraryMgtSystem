@@ -57,6 +57,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(4, 77);
             pictureBox1.Name = "pictureBox1";
@@ -67,6 +68,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Wheat;
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
@@ -110,6 +112,7 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.FromArgb(255, 192, 128);
             panel2.Controls.Add(btnCancel);
             panel2.Controls.Add(btnSave);
@@ -132,6 +135,7 @@
             // 
             // btnCancel
             // 
+            btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCancel.FlatStyle = FlatStyle.Popup;
             btnCancel.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnCancel.Location = new Point(338, 302);
@@ -144,6 +148,7 @@
             // 
             // btnSave
             // 
+            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSave.FlatStyle = FlatStyle.Popup;
             btnSave.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSave.Location = new Point(215, 302);
@@ -156,6 +161,7 @@
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dateTimePicker1.Location = new Point(187, 171);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(245, 27);
@@ -163,6 +169,7 @@
             // 
             // txtQuantity
             // 
+            txtQuantity.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtQuantity.Location = new Point(187, 258);
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(245, 27);
@@ -170,6 +177,7 @@
             // 
             // txtPrice
             // 
+            txtPrice.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPrice.Location = new Point(187, 212);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(245, 27);
@@ -177,6 +185,7 @@
             // 
             // txtPublication
             // 
+            txtPublication.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPublication.Location = new Point(187, 129);
             txtPublication.Name = "txtPublication";
             txtPublication.Size = new Size(245, 27);
@@ -184,6 +193,7 @@
             // 
             // txtAuthor
             // 
+            txtAuthor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtAuthor.Location = new Point(187, 83);
             txtAuthor.Name = "txtAuthor";
             txtAuthor.Size = new Size(245, 27);
@@ -191,6 +201,7 @@
             // 
             // txtBookName
             // 
+            txtBookName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtBookName.Location = new Point(187, 36);
             txtBookName.Name = "txtBookName";
             txtBookName.Size = new Size(245, 27);

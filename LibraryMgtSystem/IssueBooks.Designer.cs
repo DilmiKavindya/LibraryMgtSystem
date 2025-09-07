@@ -65,6 +65,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.White;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
@@ -96,6 +97,7 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel2.BackColor = Color.FromArgb(224, 224, 224);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
@@ -170,6 +172,7 @@
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel3.BackColor = Color.Silver;
             panel3.Controls.Add(label10);
             panel3.Controls.Add(btnIssueBook);
@@ -194,6 +197,7 @@
             // 
             // label10
             // 
+            label10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label10.AutoSize = true;
             label10.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.Red;
@@ -205,6 +209,7 @@
             // 
             // btnIssueBook
             // 
+            btnIssueBook.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnIssueBook.FlatStyle = FlatStyle.Popup;
             btnIssueBook.Font = new Font("Arial", 9F);
             btnIssueBook.Location = new Point(296, 316);
@@ -216,6 +221,7 @@
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dateTimePicker1.Location = new Point(159, 270);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(231, 27);
@@ -223,6 +229,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(159, 228);
             comboBox1.Name = "comboBox1";
@@ -231,6 +238,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtEmail.Location = new Point(159, 186);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(231, 27);
@@ -238,6 +246,7 @@
             // 
             // txtConNo
             // 
+            txtConNo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtConNo.Location = new Point(159, 143);
             txtConNo.Name = "txtConNo";
             txtConNo.Size = new Size(231, 27);
@@ -245,6 +254,7 @@
             // 
             // txtSemester
             // 
+            txtSemester.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtSemester.Location = new Point(159, 99);
             txtSemester.Name = "txtSemester";
             txtSemester.Size = new Size(231, 27);
@@ -252,6 +262,7 @@
             // 
             // txtDepartment
             // 
+            txtDepartment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtDepartment.Location = new Point(159, 56);
             txtDepartment.Name = "txtDepartment";
             txtDepartment.Size = new Size(231, 27);
@@ -259,6 +270,7 @@
             // 
             // txtStName
             // 
+            txtStName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtStName.Location = new Point(159, 13);
             txtStName.Name = "txtStName";
             txtStName.Size = new Size(231, 27);
