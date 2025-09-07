@@ -57,6 +57,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Silver;
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
@@ -87,6 +88,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(0, 98);
             pictureBox2.Name = "pictureBox2";
@@ -97,6 +99,7 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.Gray;
             panel2.Controls.Add(txtEmail);
             panel2.Controls.Add(label7);
@@ -120,6 +123,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtEmail.Location = new Point(163, 219);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(215, 27);
@@ -137,6 +141,7 @@
             // 
             // btnCancel
             // 
+            btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnCancel.FlatStyle = FlatStyle.Popup;
             btnCancel.Font = new Font("Arial", 9F);
             btnCancel.Location = new Point(298, 281);
@@ -149,6 +154,7 @@
             // 
             // btnSave
             // 
+            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnSave.FlatStyle = FlatStyle.Popup;
             btnSave.Font = new Font("Arial", 9F);
             btnSave.Location = new Point(185, 281);
@@ -161,6 +167,7 @@
             // 
             // btnRefresh
             // 
+            btnRefresh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnRefresh.FlatStyle = FlatStyle.Popup;
             btnRefresh.Font = new Font("Arial", 9F);
             btnRefresh.Location = new Point(72, 281);
@@ -173,6 +180,7 @@
             // 
             // txtContact
             // 
+            txtContact.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtContact.Location = new Point(163, 180);
             txtContact.Name = "txtContact";
             txtContact.Size = new Size(215, 27);
@@ -180,6 +188,7 @@
             // 
             // txtSemester
             // 
+            txtSemester.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtSemester.Location = new Point(163, 140);
             txtSemester.Name = "txtSemester";
             txtSemester.Size = new Size(215, 27);
@@ -187,6 +196,7 @@
             // 
             // txtDepartment
             // 
+            txtDepartment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtDepartment.Location = new Point(163, 100);
             txtDepartment.Name = "txtDepartment";
             txtDepartment.Size = new Size(215, 27);
@@ -194,6 +204,7 @@
             // 
             // txtEnrollment
             // 
+            txtEnrollment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtEnrollment.Location = new Point(163, 60);
             txtEnrollment.Name = "txtEnrollment";
             txtEnrollment.Size = new Size(215, 27);
@@ -201,6 +212,7 @@
             // 
             // txtName
             // 
+            txtName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtName.Location = new Point(163, 20);
             txtName.Name = "txtName";
             txtName.Size = new Size(215, 27);

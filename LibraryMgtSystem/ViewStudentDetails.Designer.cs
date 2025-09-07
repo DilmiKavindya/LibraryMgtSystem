@@ -313,7 +313,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(255, 192, 128);
-            ClientSize = new Size(968, 469);
+            ClientSize = new Size(937, 469);
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
             Controls.Add(btnRefresh);
