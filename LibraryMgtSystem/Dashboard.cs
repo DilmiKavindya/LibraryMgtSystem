@@ -48,5 +48,11 @@ namespace LibraryMgtSystem
             ViewStudentDetails vsd = new ViewStudentDetails();
             vsd.Show();
         }
+
+        private void issueBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IssueBooks ib = new IssueBooks();
+            ib.Show();
+        }
     }
 }

@@ -119,6 +119,7 @@
             issueBooksToolStripMenuItem.Name = "issueBooksToolStripMenuItem";
             issueBooksToolStripMenuItem.Size = new Size(152, 68);
             issueBooksToolStripMenuItem.Text = "Issue Books";
+            issueBooksToolStripMenuItem.Click += issueBooksToolStripMenuItem_Click;
             // 
             // returnBooksToolStripMenuItem
             // 

@@ -30,32 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IssueBooks));
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            pictureBox2 = new PictureBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            pictureBox2 = new PictureBox();
             panel3 = new Panel();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            txtStName = new TextBox();
-            txtDepartment = new TextBox();
-            txtSemester = new TextBox();
-            txtConNo = new TextBox();
-            txtEmail = new TextBox();
-            comboBox1 = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
-            btnIssueBook = new Button();
             label10 = new Label();
+            btnIssueBook = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            comboBox1 = new ComboBox();
+            txtEmail = new TextBox();
+            txtConNo = new TextBox();
+            txtSemester = new TextBox();
+            txtDepartment = new TextBox();
+            txtStName = new TextBox();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -73,16 +73,6 @@
             panel1.Size = new Size(680, 115);
             panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(208, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(228, 115);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -93,6 +83,16 @@
             label1.Size = new Size(126, 24);
             label1.TabIndex = 1;
             label1.Text = "Issue Books";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(208, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(228, 115);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -108,43 +108,16 @@
             panel2.Size = new Size(251, 383);
             panel2.TabIndex = 1;
             // 
-            // pictureBox2
+            // button3
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(75, 9);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(99, 84);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(50, 107);
-            label2.Name = "label2";
-            label2.Size = new Size(143, 17);
-            label2.TabIndex = 1;
-            label2.Text = "Enter Enrollment No.";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(56, 137);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(56, 216);
-            button1.Name = "button1";
-            button1.Size = new Size(125, 29);
-            button1.TabIndex = 3;
-            button1.Text = "Search Student";
-            button1.UseVisualStyleBackColor = true;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Arial", 9F);
+            button3.Location = new Point(167, 278);
+            button3.Name = "button3";
+            button3.Size = new Size(71, 29);
+            button3.TabIndex = 5;
+            button3.Text = "Exit";
+            button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -157,16 +130,43 @@
             button2.Text = "Refresh";
             button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button1
             // 
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Arial", 9F);
-            button3.Location = new Point(167, 278);
-            button3.Name = "button3";
-            button3.Size = new Size(71, 29);
-            button3.TabIndex = 5;
-            button3.Text = "Exit";
-            button3.UseVisualStyleBackColor = true;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(56, 216);
+            button1.Name = "button1";
+            button1.Size = new Size(125, 29);
+            button1.TabIndex = 3;
+            button1.Text = "Search Student";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(56, 137);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(50, 107);
+            label2.Name = "label2";
+            label2.Size = new Size(143, 17);
+            label2.TabIndex = 1;
+            label2.Text = "Enter Enrollment No.";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(75, 9);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(99, 84);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
             // 
             // panel3
             // 
@@ -192,125 +192,16 @@
             panel3.Size = new Size(423, 383);
             panel3.TabIndex = 2;
             // 
-            // label3
+            // label10
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(27, 17);
-            label3.Name = "label3";
-            label3.Size = new Size(101, 17);
-            label3.TabIndex = 0;
-            label3.Text = "Student Name";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 9F);
-            label4.Location = new Point(27, 62);
-            label4.Name = "label4";
-            label4.Size = new Size(85, 17);
-            label4.TabIndex = 1;
-            label4.Text = "Department";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial", 9F);
-            label5.Location = new Point(27, 107);
-            label5.Name = "label5";
-            label5.Size = new Size(72, 17);
-            label5.TabIndex = 2;
-            label5.Text = "Semester";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial", 9F);
-            label6.Location = new Point(27, 149);
-            label6.Name = "label6";
-            label6.Size = new Size(85, 17);
-            label6.TabIndex = 3;
-            label6.Text = "Contact No.";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial", 9F);
-            label7.Location = new Point(27, 192);
-            label7.Name = "label7";
-            label7.Size = new Size(45, 17);
-            label7.TabIndex = 4;
-            label7.Text = "Email";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Arial", 9F);
-            label8.Location = new Point(27, 234);
-            label8.Name = "label8";
-            label8.Size = new Size(84, 17);
-            label8.TabIndex = 5;
-            label8.Text = "Book Name";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Arial", 9F);
-            label9.Location = new Point(27, 276);
-            label9.Name = "label9";
-            label9.Size = new Size(115, 17);
-            label9.TabIndex = 6;
-            label9.Text = "Book Issue Date";
-            // 
-            // txtStName
-            // 
-            txtStName.Location = new Point(159, 13);
-            txtStName.Name = "txtStName";
-            txtStName.Size = new Size(231, 27);
-            txtStName.TabIndex = 7;
-            // 
-            // txtDepartment
-            // 
-            txtDepartment.Location = new Point(159, 56);
-            txtDepartment.Name = "txtDepartment";
-            txtDepartment.Size = new Size(231, 27);
-            txtDepartment.TabIndex = 8;
-            // 
-            // txtSemester
-            // 
-            txtSemester.Location = new Point(159, 99);
-            txtSemester.Name = "txtSemester";
-            txtSemester.Size = new Size(231, 27);
-            txtSemester.TabIndex = 9;
-            // 
-            // txtConNo
-            // 
-            txtConNo.Location = new Point(159, 143);
-            txtConNo.Name = "txtConNo";
-            txtConNo.Size = new Size(231, 27);
-            txtConNo.TabIndex = 10;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(159, 186);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(231, 27);
-            txtEmail.TabIndex = 11;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(159, 228);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(231, 28);
-            comboBox1.TabIndex = 12;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(159, 270);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(231, 27);
-            dateTimePicker1.TabIndex = 13;
+            label10.AutoSize = true;
+            label10.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.Red;
+            label10.Location = new Point(55, 359);
+            label10.Name = "label10";
+            label10.Size = new Size(355, 18);
+            label10.TabIndex = 15;
+            label10.Text = "Maximum 3 Books Can  be ISSUED to 1 Student   ";
             // 
             // btnIssueBook
             // 
@@ -323,16 +214,125 @@
             btnIssueBook.Text = "Issue Book";
             btnIssueBook.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // dateTimePicker1
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.Red;
-            label10.Location = new Point(55, 359);
-            label10.Name = "label10";
-            label10.Size = new Size(355, 18);
-            label10.TabIndex = 15;
-            label10.Text = "Maximum 3 Books Can  be ISSUED to 1 Student   ";
+            dateTimePicker1.Location = new Point(159, 270);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(231, 27);
+            dateTimePicker1.TabIndex = 13;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(159, 228);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(231, 28);
+            comboBox1.TabIndex = 12;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(159, 186);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(231, 27);
+            txtEmail.TabIndex = 11;
+            // 
+            // txtConNo
+            // 
+            txtConNo.Location = new Point(159, 143);
+            txtConNo.Name = "txtConNo";
+            txtConNo.Size = new Size(231, 27);
+            txtConNo.TabIndex = 10;
+            // 
+            // txtSemester
+            // 
+            txtSemester.Location = new Point(159, 99);
+            txtSemester.Name = "txtSemester";
+            txtSemester.Size = new Size(231, 27);
+            txtSemester.TabIndex = 9;
+            // 
+            // txtDepartment
+            // 
+            txtDepartment.Location = new Point(159, 56);
+            txtDepartment.Name = "txtDepartment";
+            txtDepartment.Size = new Size(231, 27);
+            txtDepartment.TabIndex = 8;
+            // 
+            // txtStName
+            // 
+            txtStName.Location = new Point(159, 13);
+            txtStName.Name = "txtStName";
+            txtStName.Size = new Size(231, 27);
+            txtStName.TabIndex = 7;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Arial", 9F);
+            label9.Location = new Point(27, 276);
+            label9.Name = "label9";
+            label9.Size = new Size(115, 17);
+            label9.TabIndex = 6;
+            label9.Text = "Book Issue Date";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial", 9F);
+            label8.Location = new Point(27, 234);
+            label8.Name = "label8";
+            label8.Size = new Size(84, 17);
+            label8.TabIndex = 5;
+            label8.Text = "Book Name";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial", 9F);
+            label7.Location = new Point(27, 192);
+            label7.Name = "label7";
+            label7.Size = new Size(45, 17);
+            label7.TabIndex = 4;
+            label7.Text = "Email";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial", 9F);
+            label6.Location = new Point(27, 149);
+            label6.Name = "label6";
+            label6.Size = new Size(85, 17);
+            label6.TabIndex = 3;
+            label6.Text = "Contact No.";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Arial", 9F);
+            label5.Location = new Point(27, 107);
+            label5.Name = "label5";
+            label5.Size = new Size(72, 17);
+            label5.TabIndex = 2;
+            label5.Text = "Semester";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 9F);
+            label4.Location = new Point(27, 62);
+            label4.Name = "label4";
+            label4.Size = new Size(85, 17);
+            label4.TabIndex = 1;
+            label4.Text = "Department";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(27, 17);
+            label3.Name = "label3";
+            label3.Size = new Size(101, 17);
+            label3.TabIndex = 0;
+            label3.Text = "Student Name";
             // 
             // IssueBooks
             // 
@@ -344,6 +344,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "IssueBooks";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "IssueBooks";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
