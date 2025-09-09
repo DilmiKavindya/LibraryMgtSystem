@@ -33,17 +33,17 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            btnExit = new Button();
+            btnRefresh = new Button();
+            btnSearchStudent = new Button();
+            txtEnrollment = new TextBox();
             label2 = new Label();
             pictureBox2 = new PictureBox();
             panel3 = new Panel();
             label10 = new Label();
             btnIssueBook = new Button();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox1 = new ComboBox();
+            dateTimePicker = new DateTimePicker();
+            comboBoxBooks = new ComboBox();
             txtEmail = new TextBox();
             txtConNo = new TextBox();
             txtSemester = new TextBox();
@@ -99,10 +99,10 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             panel2.BackColor = Color.FromArgb(224, 224, 224);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(btnExit);
+            panel2.Controls.Add(btnRefresh);
+            panel2.Controls.Add(btnSearchStudent);
+            panel2.Controls.Add(txtEnrollment);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox2);
             panel2.Location = new Point(1, 122);
@@ -110,45 +110,49 @@
             panel2.Size = new Size(251, 383);
             panel2.TabIndex = 1;
             // 
-            // button3
+            // btnExit
             // 
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Arial", 9F);
-            button3.Location = new Point(167, 278);
-            button3.Name = "button3";
-            button3.Size = new Size(71, 29);
-            button3.TabIndex = 5;
-            button3.Text = "Exit";
-            button3.UseVisualStyleBackColor = true;
+            btnExit.FlatStyle = FlatStyle.Popup;
+            btnExit.Font = new Font("Arial", 9F);
+            btnExit.Location = new Point(167, 278);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(71, 29);
+            btnExit.TabIndex = 5;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
-            // button2
+            // btnRefresh
             // 
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Font = new Font("Arial", 9F);
-            button2.Location = new Point(12, 278);
-            button2.Name = "button2";
-            button2.Size = new Size(71, 29);
-            button2.TabIndex = 4;
-            button2.Text = "Refresh";
-            button2.UseVisualStyleBackColor = true;
+            btnRefresh.FlatStyle = FlatStyle.Popup;
+            btnRefresh.Font = new Font("Arial", 9F);
+            btnRefresh.Location = new Point(12, 278);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(71, 29);
+            btnRefresh.TabIndex = 4;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
-            // button1
+            // btnSearchStudent
             // 
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(56, 216);
-            button1.Name = "button1";
-            button1.Size = new Size(125, 29);
-            button1.TabIndex = 3;
-            button1.Text = "Search Student";
-            button1.UseVisualStyleBackColor = true;
+            btnSearchStudent.FlatStyle = FlatStyle.Popup;
+            btnSearchStudent.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSearchStudent.Location = new Point(56, 216);
+            btnSearchStudent.Name = "btnSearchStudent";
+            btnSearchStudent.Size = new Size(125, 29);
+            btnSearchStudent.TabIndex = 3;
+            btnSearchStudent.Text = "Search Student";
+            btnSearchStudent.UseVisualStyleBackColor = true;
+            btnSearchStudent.Click += btnSearchStudent_Click;
             // 
-            // textBox1
+            // txtEnrollment
             // 
-            textBox1.Location = new Point(56, 137);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
+            txtEnrollment.Location = new Point(56, 137);
+            txtEnrollment.Name = "txtEnrollment";
+            txtEnrollment.Size = new Size(125, 27);
+            txtEnrollment.TabIndex = 2;
+            txtEnrollment.TextChanged += txtEnrollment_TextChanged;
             // 
             // label2
             // 
@@ -176,8 +180,8 @@
             panel3.BackColor = Color.Silver;
             panel3.Controls.Add(label10);
             panel3.Controls.Add(btnIssueBook);
-            panel3.Controls.Add(dateTimePicker1);
-            panel3.Controls.Add(comboBox1);
+            panel3.Controls.Add(dateTimePicker);
+            panel3.Controls.Add(comboBoxBooks);
             panel3.Controls.Add(txtEmail);
             panel3.Controls.Add(txtConNo);
             panel3.Controls.Add(txtSemester);
@@ -218,29 +222,32 @@
             btnIssueBook.TabIndex = 14;
             btnIssueBook.Text = "Issue Book";
             btnIssueBook.UseVisualStyleBackColor = true;
+            btnIssueBook.Click += btnIssueBook_Click;
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            dateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dateTimePicker1.Location = new Point(159, 270);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(231, 27);
-            dateTimePicker1.TabIndex = 13;
+            dateTimePicker.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dateTimePicker.Location = new Point(159, 270);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.Size = new Size(231, 27);
+            dateTimePicker.TabIndex = 13;
             // 
-            // comboBox1
+            // comboBoxBooks
             // 
-            comboBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(159, 228);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(231, 28);
-            comboBox1.TabIndex = 12;
+            comboBoxBooks.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            comboBoxBooks.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxBooks.FormattingEnabled = true;
+            comboBoxBooks.Location = new Point(159, 228);
+            comboBoxBooks.Name = "comboBoxBooks";
+            comboBoxBooks.Size = new Size(231, 28);
+            comboBoxBooks.TabIndex = 12;
             // 
             // txtEmail
             // 
             txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtEmail.Location = new Point(159, 186);
             txtEmail.Name = "txtEmail";
+            txtEmail.ReadOnly = true;
             txtEmail.Size = new Size(231, 27);
             txtEmail.TabIndex = 11;
             // 
@@ -249,6 +256,7 @@
             txtConNo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtConNo.Location = new Point(159, 143);
             txtConNo.Name = "txtConNo";
+            txtConNo.ReadOnly = true;
             txtConNo.Size = new Size(231, 27);
             txtConNo.TabIndex = 10;
             // 
@@ -257,6 +265,7 @@
             txtSemester.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtSemester.Location = new Point(159, 99);
             txtSemester.Name = "txtSemester";
+            txtSemester.ReadOnly = true;
             txtSemester.Size = new Size(231, 27);
             txtSemester.TabIndex = 9;
             // 
@@ -265,6 +274,7 @@
             txtDepartment.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtDepartment.Location = new Point(159, 56);
             txtDepartment.Name = "txtDepartment";
+            txtDepartment.ReadOnly = true;
             txtDepartment.Size = new Size(231, 27);
             txtDepartment.TabIndex = 8;
             // 
@@ -273,6 +283,7 @@
             txtStName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtStName.Location = new Point(159, 13);
             txtStName.Name = "txtStName";
+            txtStName.ReadOnly = true;
             txtStName.Size = new Size(231, 27);
             txtStName.TabIndex = 7;
             // 
@@ -358,6 +369,7 @@
             Name = "IssueBooks";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "IssueBooks";
+            Load += IssueBooks_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -377,10 +389,10 @@
         private Panel panel2;
         private Label label2;
         private PictureBox pictureBox2;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private TextBox textBox1;
+        private Button btnExit;
+        private Button btnRefresh;
+        private Button btnSearchStudent;
+        private TextBox txtEnrollment;
         private Panel panel3;
         private TextBox txtStName;
         private Label label9;
@@ -391,8 +403,8 @@
         private Label label4;
         private Label label3;
         private Button btnIssueBook;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox1;
+        private DateTimePicker dateTimePicker;
+        private ComboBox comboBoxBooks;
         private TextBox txtEmail;
         private TextBox txtConNo;
         private TextBox txtSemester;
