@@ -4,7 +4,7 @@ This **Library Management System** is a desktop application built using **C#** o
 
 
 
-## 🔧 Technologies Used----
+## 🔧 Technologies Used
 
 - **Language**: C#
 - **Framework**: .NET
