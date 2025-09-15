@@ -126,7 +126,7 @@
             // 
             btnRefresh.FlatStyle = FlatStyle.Popup;
             btnRefresh.Font = new Font("Arial", 9F);
-            btnRefresh.Location = new Point(12, 278);
+            btnRefresh.Location = new Point(13, 278);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(71, 29);
             btnRefresh.TabIndex = 4;
