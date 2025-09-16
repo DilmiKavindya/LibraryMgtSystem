@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReturnBooks));
             panel1 = new Panel();
+            btnExit = new Button();
+            btnRefresh = new Button();
             btnSearchStudent = new Button();
-            textBox1 = new TextBox();
+            txtEnrollment = new TextBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
-            btnRefresh = new Button();
-            btnExit = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            textBox2 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox3 = new TextBox();
-            btnReturn = new Button();
             btnCancel = new Button();
+            btnReturn = new Button();
+            txtBIssueDate = new TextBox();
+            dateTimePicker1 = new DateTimePicker();
+            txtBookName = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -58,13 +58,35 @@
             panel1.Controls.Add(btnExit);
             panel1.Controls.Add(btnRefresh);
             panel1.Controls.Add(btnSearchStudent);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtEnrollment);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(2, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(302, 568);
             panel1.TabIndex = 0;
+            // 
+            // btnExit
+            // 
+            btnExit.FlatStyle = FlatStyle.Popup;
+            btnExit.Font = new Font("Arial", 9F);
+            btnExit.Location = new Point(184, 304);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(94, 29);
+            btnExit.TabIndex = 5;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.FlatStyle = FlatStyle.Popup;
+            btnRefresh.Font = new Font("Arial", 9F);
+            btnRefresh.Location = new Point(21, 304);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(94, 29);
+            btnRefresh.TabIndex = 4;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = true;
             // 
             // btnSearchStudent
             // 
@@ -76,13 +98,15 @@
             btnSearchStudent.TabIndex = 3;
             btnSearchStudent.Text = "Search Student";
             btnSearchStudent.UseVisualStyleBackColor = true;
+            btnSearchStudent.Click += btnSearchStudent_Click;
             // 
-            // textBox1
+            // txtEnrollment
             // 
-            textBox1.Location = new Point(55, 163);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(168, 27);
-            textBox1.TabIndex = 2;
+            txtEnrollment.Font = new Font("Arial", 9F);
+            txtEnrollment.Location = new Point(55, 163);
+            txtEnrollment.Name = "txtEnrollment";
+            txtEnrollment.Size = new Size(168, 25);
+            txtEnrollment.TabIndex = 2;
             // 
             // label1
             // 
@@ -110,119 +134,99 @@
             dataGridView1.Location = new Point(305, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(701, 421);
+            dataGridView1.Size = new Size(1202, 421);
             dataGridView1.TabIndex = 1;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // panel2
             // 
             panel2.BackColor = Color.DarkGray;
             panel2.Controls.Add(btnCancel);
             panel2.Controls.Add(btnReturn);
-            panel2.Controls.Add(textBox3);
+            panel2.Controls.Add(txtBIssueDate);
             panel2.Controls.Add(dateTimePicker1);
-            panel2.Controls.Add(textBox2);
+            panel2.Controls.Add(txtBookName);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(305, 425);
             panel2.Name = "panel2";
-            panel2.Size = new Size(702, 145);
+            panel2.Size = new Size(1202, 145);
             panel2.TabIndex = 2;
-            // 
-            // btnRefresh
-            // 
-            btnRefresh.FlatStyle = FlatStyle.Popup;
-            btnRefresh.Font = new Font("Arial", 9F);
-            btnRefresh.Location = new Point(21, 304);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(94, 29);
-            btnRefresh.TabIndex = 4;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = true;
-            // 
-            // btnExit
-            // 
-            btnExit.FlatStyle = FlatStyle.Popup;
-            btnExit.Font = new Font("Arial", 9F);
-            btnExit.Location = new Point(184, 304);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(94, 29);
-            btnExit.TabIndex = 5;
-            btnExit.Text = "Exit";
-            btnExit.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 9F);
-            label2.Location = new Point(74, 15);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 17);
-            label2.TabIndex = 0;
-            label2.Text = "Book Name";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 9F);
-            label3.Location = new Point(74, 55);
-            label3.Name = "label3";
-            label3.Size = new Size(115, 17);
-            label3.TabIndex = 1;
-            label3.Text = "Book Issue Date";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 9F);
-            label4.Location = new Point(74, 97);
-            label4.Name = "label4";
-            label4.Size = new Size(124, 17);
-            label4.TabIndex = 2;
-            label4.Text = "Book Return Date";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(235, 15);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(250, 27);
-            textBox2.TabIndex = 3;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(235, 96);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
-            dateTimePicker1.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(235, 55);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(250, 27);
-            textBox3.TabIndex = 5;
-            // 
-            // btnReturn
-            // 
-            btnReturn.FlatStyle = FlatStyle.Popup;
-            btnReturn.Font = new Font("Arial", 9F);
-            btnReturn.Location = new Point(535, 53);
-            btnReturn.Name = "btnReturn";
-            btnReturn.Size = new Size(94, 29);
-            btnReturn.TabIndex = 6;
-            btnReturn.Text = "Return";
-            btnReturn.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
             btnCancel.FlatStyle = FlatStyle.Popup;
             btnCancel.Font = new Font("Arial", 9F);
-            btnCancel.Location = new Point(535, 94);
+            btnCancel.Location = new Point(731, 94);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(94, 29);
             btnCancel.TabIndex = 7;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // btnReturn
+            // 
+            btnReturn.FlatStyle = FlatStyle.Popup;
+            btnReturn.Font = new Font("Arial", 9F);
+            btnReturn.Location = new Point(731, 53);
+            btnReturn.Name = "btnReturn";
+            btnReturn.Size = new Size(94, 29);
+            btnReturn.TabIndex = 6;
+            btnReturn.Text = "Return";
+            btnReturn.UseVisualStyleBackColor = true;
+            btnReturn.Click += btnReturn_Click;
+            // 
+            // txtBIssueDate
+            // 
+            txtBIssueDate.Location = new Point(394, 55);
+            txtBIssueDate.Name = "txtBIssueDate";
+            txtBIssueDate.Size = new Size(250, 27);
+            txtBIssueDate.TabIndex = 5;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(394, 96);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(250, 27);
+            dateTimePicker1.TabIndex = 4;
+            // 
+            // txtBookName
+            // 
+            txtBookName.Location = new Point(394, 15);
+            txtBookName.Name = "txtBookName";
+            txtBookName.Size = new Size(250, 27);
+            txtBookName.TabIndex = 3;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Arial", 9F);
+            label4.Location = new Point(233, 97);
+            label4.Name = "label4";
+            label4.Size = new Size(124, 17);
+            label4.TabIndex = 2;
+            label4.Text = "Book Return Date";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 9F);
+            label3.Location = new Point(233, 55);
+            label3.Name = "label3";
+            label3.Size = new Size(115, 17);
+            label3.TabIndex = 1;
+            label3.Text = "Book Issue Date";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Arial", 9F);
+            label2.Location = new Point(233, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(84, 17);
+            label2.TabIndex = 0;
+            label2.Text = "Book Name";
             // 
             // ReturnBooks
             // 
@@ -230,12 +234,14 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.FromArgb(255, 192, 128);
-            ClientSize = new Size(1006, 446);
+            ClientSize = new Size(1485, 454);
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Name = "ReturnBooks";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ReturnBooks";
+            Load += ReturnBooks_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -252,13 +258,13 @@
         private Panel panel2;
         private Label label1;
         private PictureBox pictureBox1;
-        private TextBox textBox1;
+        private TextBox txtEnrollment;
         private Button btnSearchStudent;
         private Button btnExit;
         private Button btnRefresh;
-        private TextBox textBox3;
+        private TextBox txtBIssueDate;
         private DateTimePicker dateTimePicker1;
-        private TextBox textBox2;
+        private TextBox txtBookName;
         private Label label4;
         private Label label3;
         private Label label2;

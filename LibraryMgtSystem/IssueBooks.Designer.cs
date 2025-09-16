@@ -148,9 +148,10 @@
             // 
             // txtEnrollment
             // 
+            txtEnrollment.Font = new Font("Arial", 9F);
             txtEnrollment.Location = new Point(56, 137);
             txtEnrollment.Name = "txtEnrollment";
-            txtEnrollment.Size = new Size(125, 27);
+            txtEnrollment.Size = new Size(125, 25);
             txtEnrollment.TabIndex = 2;
             txtEnrollment.TextChanged += txtEnrollment_TextChanged;
             // 

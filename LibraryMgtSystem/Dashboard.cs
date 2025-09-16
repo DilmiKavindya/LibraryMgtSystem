@@ -54,5 +54,11 @@ namespace LibraryMgtSystem
             IssueBooks ib = new IssueBooks();
             ib.Show();
         }
+
+        private void returnBooksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReturnBooks rb = new ReturnBooks();
+            rb.Show();
+        }
     }
 }
