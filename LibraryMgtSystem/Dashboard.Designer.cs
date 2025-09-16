@@ -130,6 +130,7 @@
             returnBooksToolStripMenuItem.Name = "returnBooksToolStripMenuItem";
             returnBooksToolStripMenuItem.Size = new Size(161, 68);
             returnBooksToolStripMenuItem.Text = "Return Books";
+            returnBooksToolStripMenuItem.Click += returnBooksToolStripMenuItem_Click;
             // 
             // completeBookDetailsToolStripMenuItem
             // 
