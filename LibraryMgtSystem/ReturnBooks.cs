@@ -19,7 +19,7 @@ namespace LibraryMgtSystem
         {
             using (SqlConnection con = new SqlConnection("Data Source=DILMI-LAP\\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;"))
             {
-                string query = @" SELECT stName AS [Name], enroll AS [Enroll No], dep AS [Department], sem AS [Semester], contact AS [Contact], email AS [Email],  bookName AS [Book Name], bookIssueDate AS [Issued Date], 
+                string query = @" SELECT stName AS [Student Name], enroll AS [Enrollment No.], dep AS [Department], sem AS [Semester], contact AS [Contact No.], email AS [Email],  bookName AS [Book Name], bookIssueDate AS [Issued Date], 
                         CASE 
                             WHEN bookReturnDate IS NULL OR bookReturnDate = 'Not Returned' 
                             THEN 'Not Returned'
