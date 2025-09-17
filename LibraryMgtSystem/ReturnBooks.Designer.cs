@@ -76,6 +76,7 @@
             btnExit.TabIndex = 5;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // btnRefresh
             // 
@@ -87,6 +88,7 @@
             btnRefresh.TabIndex = 4;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnSearchStudent
             // 
@@ -107,6 +109,7 @@
             txtEnrollment.Name = "txtEnrollment";
             txtEnrollment.Size = new Size(168, 25);
             txtEnrollment.TabIndex = 2;
+            txtEnrollment.TextChanged += txtEnrollment_TextChanged;
             // 
             // label1
             // 
@@ -164,6 +167,7 @@
             btnCancel.TabIndex = 7;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnReturn
             // 
