@@ -140,6 +140,7 @@
             completeBookDetailsToolStripMenuItem.Name = "completeBookDetailsToolStripMenuItem";
             completeBookDetailsToolStripMenuItem.Size = new Size(235, 68);
             completeBookDetailsToolStripMenuItem.Text = "Complete Book Details";
+            completeBookDetailsToolStripMenuItem.Click += completeBookDetailsToolStripMenuItem_Click;
             // 
             // eToolStripMenuItem
             // 

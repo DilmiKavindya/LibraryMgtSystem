@@ -60,5 +60,11 @@ namespace LibraryMgtSystem
             ReturnBooks rb = new ReturnBooks();
             rb.Show();
         }
+
+        private void completeBookDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CompletedBookDetails cbd = new CompletedBookDetails();
+            cbd.Show();
+        }
     }
 }
