@@ -51,7 +51,7 @@ SQL queries are used for efficient data operations.
 
 ## 🚀 Getting Started
 
-### ✅ Prerequisites////
+### ✅ Prerequisites
 
 - Visual Studio 2022 
 - .NET Framework
