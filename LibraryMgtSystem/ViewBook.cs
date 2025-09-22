@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using Microsoft.Data.SqlClient;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
+using Microsoft.Data.SqlClient;
 
 namespace LibraryMgtSystem
 {
@@ -36,7 +29,7 @@ namespace LibraryMgtSystem
                 string query = string.IsNullOrWhiteSpace(searchTerm)
                     ? @"SELECT BookId AS [ID], BookName AS [Book Name], BookAuthor AS [Book Author], BookPublication AS [Publication], BookPurchaseDate AS [Purchase Date], BookPrice AS [Price], BookQuantity AS [Quantity]
                         FROM NewBook"
-                    : @"SELECT BookId AS [ID], BookName AS [Book Name], BookAuthor AS [Book Author], BookPublication AS [Publication], BookPurchaseDate AS [Purchase Date], BookPrice AS [rice], BookQuantity AS [Quantity]
+                    : @"SELECT BookId AS [ID], BookName AS [Book Name], BookAuthor AS [Book Author], BookPublication AS [Publication], BookPurchaseDate AS [Purchase Date], BookPrice AS [Price], BookQuantity AS [Quantity]
                         FROM NewBook
                         WHERE BookName LIKE @SearchTerm";
 
@@ -57,9 +50,11 @@ namespace LibraryMgtSystem
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dataGridView1.Rows[e.RowIndex].Cells[0].Value != null)
+            if (e.RowIndex >= 0 && dataGridView1.Rows[e.RowIndex].Cells[0].Value != null)
             {
+                // Always refresh BookId and rowid
                 BookId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+                rowid = BookId;
                 panel2.Visible = true;
 
                 using (SqlConnection con = new SqlConnection(connectionString))
@@ -73,7 +68,6 @@ namespace LibraryMgtSystem
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         DataRow row = ds.Tables[0].Rows[0];
-                        rowid = Convert.ToInt64(row["BookId"]);
 
                         txtBName.Text = row["BookName"].ToString();
                         txtAuthor.Text = row["BookAuthor"].ToString();
@@ -105,12 +99,12 @@ namespace LibraryMgtSystem
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Data will be Updated. Confirm?", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Data will be Updated. Confirm?", "Confirm Update", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                string bname = txtBName.Text;
-                string bauthor = txtAuthor.Text;
-                string publication = txtPublication.Text;
-                string pdate = txtPDate.Text;
+                string bname = txtBName.Text.Trim();
+                string bauthor = txtAuthor.Text.Trim();
+                string publication = txtPublication.Text.Trim();
+                string pdate = txtPDate.Text.Trim();
                 Int64 price = Int64.Parse(txtPrice.Text);
                 Int64 quantity = Int64.Parse(txtQuantity.Text);
 
@@ -133,12 +127,13 @@ namespace LibraryMgtSystem
                 // Refresh DataGridView after update
                 LoadBooks(txtBNSearch.Text.Trim());
 
-                // Reselect updated row
+                // Keep updated row selected
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (row.Cells[0].Value != null && Convert.ToInt64(row.Cells[0].Value) == rowid)
                     {
                         row.Selected = true;
+                        dataGridView1.FirstDisplayedScrollingRowIndex = row.Index;
                         break;
                     }
                 }
@@ -147,7 +142,7 @@ namespace LibraryMgtSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Data will be Deleted. Confirm?", "Confirmation Dialog", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (MessageBox.Show("Data will be Deleted. Confirm?", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 using (SqlCommand cmd = new SqlCommand("DELETE FROM NewBook WHERE BookId = @BookId", con))

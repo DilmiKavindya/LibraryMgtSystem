@@ -36,7 +36,8 @@ namespace LibraryMgtSystem
                 {
                     string searchText = txtSearchEnrollment.Text.Trim();
 
-                    string query = @"SELECT * FROM NewStudent 
+                    string query = @"SELECT StudentId AS [ID], studentName AS [Student Name], enrollmentNo AS [Enrollment No.], department AS [Department], semester AS [Semester], contactNo AS [Contact No.], email AS [Email]
+                                     FROM NewStudent 
                                      WHERE studentName LIKE '%' + @search + '%'
                                         OR enrollmentNo LIKE '%' + @search + '%'
                                         OR department LIKE '%' + @search + '%'
@@ -74,7 +75,9 @@ namespace LibraryMgtSystem
         {
             using (SqlConnection con = new SqlConnection("Data Source=DILMI-LAP\\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;"))
             {
-                string query = "SELECT * FROM NewStudent";
+                string query = @"SELECT StudentId AS [ID], studentName AS [Student Name], enrollmentNo AS [Enrollment No.], department AS [Department], semester AS [Semester], contactNo AS [Contact No.], email AS [Email]
+                                 FROM NewStudent";
+
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     SqlDataAdapter DA = new SqlDataAdapter(cmd);
@@ -91,11 +94,14 @@ namespace LibraryMgtSystem
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // prevent error when clicking header row
+            if (e.RowIndex >= 0) // ensure it's not header row
             {
-                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                // Always get value from first column (StudentId)
+                var idCell = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+
+                if (idCell != null)
                 {
-                    StudentId = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    StudentId = int.Parse(idCell.ToString());
                 }
 
                 panel2.Visible = true;
@@ -139,13 +145,7 @@ namespace LibraryMgtSystem
             {
                 using (SqlConnection con = new SqlConnection("Data Source=DILMI-LAP\\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;"))
                 {
-                    string query = @"UPDATE NewStudent 
-                                     SET studentName = @stname,
-                                         enrollmentNo = @enno,
-                                         department = @dep,
-                                         semester = @sem,
-                                         contactNo = @conno,
-                                         email = @email
+                    string query = @"UPDATE NewStudent SET studentName = @stname, enrollmentNo = @enno, department = @dep, semester = @sem, contactNo = @conno, email = @email
                                      WHERE StudentId = @id";
 
                     using (SqlCommand cmd = new SqlCommand(query, con))
@@ -164,7 +164,6 @@ namespace LibraryMgtSystem
 
                         if (rows > 0)
                         {
-                            // MessageBox.Show("Student details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LoadAllStudents();
                         }
                         else
