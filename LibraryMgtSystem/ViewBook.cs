@@ -34,8 +34,11 @@ namespace LibraryMgtSystem
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 string query = string.IsNullOrWhiteSpace(searchTerm)
-                    ? "SELECT * FROM NewBook"
-                    : "SELECT * FROM NewBook WHERE BookName LIKE @SearchTerm";
+                    ? @"SELECT BookId AS [ID], BookName AS [Book Name], BookAuthor AS [Book Author], BookPublication AS [Publication], BookPurchaseDate AS [Purchase Date], BookPrice AS [Price], BookQuantity AS [Quantity]
+                        FROM NewBook"
+                    : @"SELECT BookId AS [ID], BookName AS [Book Name], BookAuthor AS [Book Author], BookPublication AS [Publication], BookPurchaseDate AS [Purchase Date], BookPrice AS [rice], BookQuantity AS [Quantity]
+                        FROM NewBook
+                        WHERE BookName LIKE @SearchTerm";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -70,14 +73,14 @@ namespace LibraryMgtSystem
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         DataRow row = ds.Tables[0].Rows[0];
-                        rowid = Convert.ToInt64(row[0]);
+                        rowid = Convert.ToInt64(row["BookId"]);
 
-                        txtBName.Text = row[1].ToString();
-                        txtAuthor.Text = row[2].ToString();
-                        txtPublication.Text = row[3].ToString();
-                        txtPDate.Text = row[4].ToString();
-                        txtPrice.Text = row[5].ToString();
-                        txtQuantity.Text = row[6].ToString();
+                        txtBName.Text = row["BookName"].ToString();
+                        txtAuthor.Text = row["BookAuthor"].ToString();
+                        txtPublication.Text = row["BookPublication"].ToString();
+                        txtPDate.Text = row["BookPurchaseDate"].ToString();
+                        txtPrice.Text = row["BookPrice"].ToString();
+                        txtQuantity.Text = row["BookQuantity"].ToString();
                     }
                 }
             }
@@ -112,7 +115,8 @@ namespace LibraryMgtSystem
                 Int64 quantity = Int64.Parse(txtQuantity.Text);
 
                 using (SqlConnection con = new SqlConnection(connectionString))
-                using (SqlCommand cmd = new SqlCommand(@"UPDATE NewBook  SET BookName = @BookName, BookAuthor = @BookAuthor, BookPublication = @BookPublication, BookPurchaseDate = @BookPurchaseDate, BookPrice = @BookPrice, BookQuantity = @BookQuantity WHERE BookId = @BookId", con))
+                using (SqlCommand cmd = new SqlCommand(@"UPDATE NewBook  SET BookName = @BookName, BookAuthor = @BookAuthor, BookPublication = @BookPublication, BookPurchaseDate = @BookPurchaseDate, BookPrice = @BookPrice, BookQuantity = @BookQuantity 
+                                                         WHERE BookId = @BookId", con))
                 {
                     cmd.Parameters.AddWithValue("@BookName", bname);
                     cmd.Parameters.AddWithValue("@BookAuthor", bauthor);
