@@ -85,6 +85,11 @@ namespace LibraryMgtSystem
             }
         }
 
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+           Form2 frm = new Form2();
+           frm.Show();
+        }
     }
 }
 

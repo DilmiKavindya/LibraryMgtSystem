@@ -145,6 +145,7 @@
             btnSignUp.TabIndex = 8;
             btnSignUp.Text = "Sign Up";
             btnSignUp.UseVisualStyleBackColor = false;
+            btnSignUp.Click += btnSignUp_Click;
             // 
             // pictureBoxInstagram
             // 
