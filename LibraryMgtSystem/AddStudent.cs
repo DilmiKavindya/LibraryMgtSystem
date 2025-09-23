@@ -20,9 +20,13 @@ namespace LibraryMgtSystem
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Confirm?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            //if (MessageBox.Show("Confirm?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            //{
+            //    this.Close();
+            //}
+            if (MessageBox.Show("Are you sure you want to cancel?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                this.Close();
+                this.Close(); // Close the AddStudent form
             }
         }
 
@@ -44,8 +48,7 @@ namespace LibraryMgtSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-            // Basic validation (you can expand this)
+            // Basic validation
             if (string.IsNullOrWhiteSpace(txtName.Text) ||
                 string.IsNullOrWhiteSpace(txtEnrollment.Text) ||
                 string.IsNullOrWhiteSpace(txtDepartment.Text) ||
@@ -80,42 +83,60 @@ namespace LibraryMgtSystem
                 return;
             }
 
+            // Data preparation
+            string name = txtName.Text.Trim();
+            string enrollment = txtEnrollment.Text.Trim();
+            string department = txtDepartment.Text.Trim();
+            string semester = txtSemester.Text.Trim();
+            string contact = txtContact.Text.Trim(); // store as string
+            string email = txtEmail.Text.Trim();
+
+            string connectionString =
+                @"Data Source=DILMI-LAP\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;";
+
             try
             {
-                String name = txtName.Text;
-                String enrollment = txtEnrollment.Text;
-                String department = txtDepartment.Text;
-                String semester = txtSemester.Text;
-                Int64 mobile = Int64.Parse(txtContact.Text);
-                String email = txtEmail.Text;
-
-                string connectionString =
-                    @"Data Source=DILMI-LAP\MSSQLSERVER01; Initial Catalog=LMSDB; Integrated Security=True; Encrypt=True; TrustServerCertificate=True;";
-
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = "INSERT INTO NewStudent (studentName, enrollmentNo, department, semester, contactNo, email) " +
-                                   "VALUES (@studentName, @enrollmentNo, @department, @semester, @contactNo, @email)";
+                    con.Open();
 
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    // Check if enrollment number already exists
+                    using (SqlCommand checkCmd = new SqlCommand(
+                        "SELECT COUNT(1) FROM NewStudent WHERE enrollmentNo = @enrollmentNo", con))
                     {
-                        cmd.Parameters.AddWithValue("@studentName", name);
-                        cmd.Parameters.AddWithValue("@enrollmentNo", enrollment);
-                        cmd.Parameters.AddWithValue("@department", department);
-                        cmd.Parameters.AddWithValue("@semester", semester);
-                        cmd.Parameters.AddWithValue("@contactNo", mobile);
-                        cmd.Parameters.AddWithValue("@email", email);
+                        checkCmd.Parameters.Add("@enrollmentNo", SqlDbType.NVarChar, 50).Value = enrollment;
 
-                        con.Open();
+                        int exists = Convert.ToInt32(checkCmd.ExecuteScalar());
+                        if (exists > 0)
+                        {
+                            MessageBox.Show("Enrollment number already exists.", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+
+                    // Insert new student
+                    string insertQuery = @"INSERT INTO NewStudent (studentName, enrollmentNo, department, semester, contactNo, email)
+                        VALUES (@studentName, @enrollmentNo, @department, @semester, @contactNo, @email)";
+
+                    using (SqlCommand cmd = new SqlCommand(insertQuery, con))
+                    {
+                        cmd.Parameters.Add("@studentName", SqlDbType.NVarChar, 100).Value = name;
+                        cmd.Parameters.Add("@enrollmentNo", SqlDbType.NVarChar, 50).Value = enrollment;
+                        cmd.Parameters.Add("@department", SqlDbType.NVarChar, 100).Value = department;
+                        cmd.Parameters.Add("@semester", SqlDbType.NVarChar, 20).Value = semester;
+                        cmd.Parameters.Add("@contactNo", SqlDbType.NVarChar, 20).Value = contact;
+                        cmd.Parameters.Add("@email", SqlDbType.NVarChar, 100).Value = email;
+
                         cmd.ExecuteNonQuery();
-                        con.Close();
                     }
                 }
 
                 MessageBox.Show("Data Saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Clear fields after saving
                 ClearFields();
+            }
+            catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601) // Unique constraint violation
+            {
+                MessageBox.Show("Enrollment number already exists (unique constraint).", "Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {
