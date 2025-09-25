@@ -200,10 +200,11 @@ namespace LibraryMgtSystem
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Unsaved Data will be Lost.", "Are You Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
-            {
-                this.Close();
-            }
+            panel2.Visible = false;
+            //if (MessageBox.Show("Unsaved Data will be Lost.", "Are You Sure?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            //{
+            //    this.Close();
+            //}
         }
     }
 }
