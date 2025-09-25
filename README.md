@@ -26,7 +26,7 @@ The frontend of this system is a **Windows Forms Application** developed using *
 ### 🔸 Backend
 The backend logic is written in **C#**, which handles:
 - Business logic and validation
-- Interaction with the SQL Server database
+- Interaction with the SSMS SQL Server database
 - Error handling and user input validation
 
 ### 🔸 Database (SQL Server)
@@ -55,7 +55,7 @@ SQL queries are used for efficient data operations.
 
 - Visual Studio 2022 
 - .NET Framework
-- SQL Server
+- SSMS SQL Server
 
 ### 📥 Clone the Repository
 
