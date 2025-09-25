@@ -9,7 +9,7 @@ This **Library Management System** is a desktop application built using **C#** o
 - **Language**: C#
 - **Framework**: .NET
 - **IDE**: Visual Studio
-- **Database**: SQL Server 
+- **Database**: SSMS SQL Server 
 - **Version Control**: Git 
 
 ---
